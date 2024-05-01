@@ -1,0 +1,14 @@
+.widget {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        margin: 0;
+    }
+    &__actions {
+        display: flex;
+        gap: 1rem;
+    }
+}
