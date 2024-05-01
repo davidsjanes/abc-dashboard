@@ -12,6 +12,7 @@ html {
     margin: 0;
     overflow: hidden;
     font-family: Nunito Sans Var;
+    font-family: acumin-variable;
 }
 
 body {
@@ -36,6 +37,9 @@ ul, ol, li, ul li, ol li {
     padding: 0;
 }
 
+button, html, input, select, textarea {
+    font-family: acumin-variable;
+}
 
 a {
     transition: background-color .25s ease;
