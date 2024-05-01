@@ -1,0 +1,44 @@
+:host {
+    flex: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    padding: 0 3rem;
+    border-top: 1px solid #e7e9ec;
+    font-size: 1.2rem;
+    &__links {
+        display: flex;
+        align-items: center;
+    }
+    &__links-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    &__link {
+        padding: 0 1rem;
+        border-right: 1px solid #cbcfd5;
+        & a {
+            color: #48525f;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+    &__copyright {
+        display: flex;
+        align-items: center;
+    }
+}

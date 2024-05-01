@@ -1,0 +1,20 @@
+.app {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    &__sidebar {
+        height: 100vh;
+        width: auto;
+        flex: none;
+    }
+    &__content {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}

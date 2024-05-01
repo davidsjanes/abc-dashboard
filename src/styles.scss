@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Nunito Sans Var;
+    src: url("./assets/fonts/NunitoSans-Variable-Web.woff2");
+ }
+
+html {
+    font-size: 10px;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: Nunito Sans Var;
+}
+
+body {
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #f5f6f7;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+    position: relative;
+}
+
+ul, ol, li, ul li, ol li {
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    transition: background-color .25s ease;
+}

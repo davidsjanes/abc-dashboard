@@ -1,0 +1,21 @@
+<div class="sidebar" [ngClass]="{'is-compact': isCompact === true}">
+    <div class="sidebar__content">
+        <div class="sidebar__branding">
+            <a href="#">
+                <img class="logo" src="../../../assets/images/ABC_logo2024.svg" alt="ABC Supply" />
+            </a>
+        </div>
+        <nav class="sidebar__nav">
+            <app-site-nav [isCompact]="isCompact"></app-site-nav>
+        </nav>
+        <div class="sidebar__actions">
+            <div class="sidebar__link" (click)="resizeSidebar()">
+                <span class="sidebar__link-icon">
+                    <img src="../../../assets/icons/arrow-left.svg" alt="Minimize Menu">
+                </span>
+                <span class="sidebar__link-text">Minimize Menu</span>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__background"></div>
+</div>
