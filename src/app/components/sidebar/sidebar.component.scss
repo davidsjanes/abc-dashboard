@@ -67,8 +67,8 @@
         rotate: 0 0 1 0deg;
         & img {
             flex: none;
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2rem;
+            height: 2rem;
         }
     }
     &__background {
@@ -99,7 +99,7 @@
         padding: 1.5rem;
     }
     & .sidebar__link {
-        padding: 1.5rem 1.75rem;
+        padding: 1.5rem 2rem;
         transition: padding .5s ease;
     }
     & .sidebar__link-text {
