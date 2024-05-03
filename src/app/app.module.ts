@@ -24,6 +24,7 @@ import { TemplatesWidgetRowComponent } from './components/pages/dashboard/widget
 import { MeasurementsWidgetRowComponent } from './components/pages/dashboard/widgets/measurements-widget/measurements-widget-row/measurements-widget-row.component';
 
 const appRoutes: Routes = [
+  {path: '', component: DashboardComponent},
   {path: 'home', component: DashboardComponent},
   {path: 'orders', component: OrdersComponent},
   {path: 'deliveries', component: DeliveriesComponent},
