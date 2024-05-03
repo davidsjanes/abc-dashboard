@@ -44,3 +44,9 @@ button, html, input, select, textarea {
 a {
     transition: background-color .25s ease;
 }
+
+.btn {
+    &--text {
+        font-size: 1.2rem;
+    }
+}
