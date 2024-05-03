@@ -1,0 +1,58 @@
+@import '../shared.scss';
+
+.grid-list {
+    &__header {
+        margin-bottom: 0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #fff;
+        padding-top: 2rem;
+        & .grid-list__content {
+            padding: 0 0 1rem 0;
+        }
+    }
+    &__list {
+        overflow: hidden;
+    }
+    &__item {
+        border: none;
+        border-bottom: 1px solid #e7e9ec;
+        margin: 0;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+    &__content {
+        grid-template-columns: 1fr 1fr 12rem 1.25fr 12rem;
+        grid-template-rows: 1fr;
+        padding: 1.5rem 0;
+        grid-gap: 1rem;
+    }
+    &__label {
+        font-size: 1.1rem;
+    }
+    &__stacked {
+        display: flex;
+        flex-direction: column;
+    }
+    &__label, &__cell {
+        padding: 0;
+    }
+}
+
+.orders {
+    &__type-badge {
+        background-color: #ebedef;
+        color: #292F36;
+    }
+    &__status {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__po-number-branch {
+        font-size: 1.1rem;
+        color: #627181;
+    }
+}
