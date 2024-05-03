@@ -20,6 +20,8 @@ import { QuotesComponent } from './components/pages/quotes/quotes.component';
 import { TemplatesComponent } from './components/pages/templates/templates.component';
 import { DeliveriesComponent } from './components/pages/deliveries/deliveries.component';
 import { OrdersWidgetRowComponent } from './components/pages/dashboard/widgets/orders-widget/orders-widget-row/orders-widget-row.component';
+import { TemplatesWidgetRowComponent } from './components/pages/dashboard/widgets/templates-widget/templates-widget-row/templates-widget-row.component';
+import { MeasurementsWidgetRowComponent } from './components/pages/dashboard/widgets/measurements-widget/measurements-widget-row/measurements-widget-row.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: DashboardComponent},
@@ -49,7 +51,9 @@ const appRoutes: Routes = [
     MeasurementsComponent,
     AccountComponent,
     QuotesComponent,
-    OrdersWidgetRowComponent
+    OrdersWidgetRowComponent,
+    TemplatesWidgetRowComponent,
+    MeasurementsWidgetRowComponent
   ],
   imports: [
     BrowserModule,
