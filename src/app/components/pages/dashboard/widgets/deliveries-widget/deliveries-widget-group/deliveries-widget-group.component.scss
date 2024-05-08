@@ -1,6 +1,9 @@
 .deliveries-group {
     &__header {
-        padding: 2rem 2rem 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 1.5rem 2rem 1.25rem 2rem;
         border-bottom: 1px solid #e7e9ec;
         background-color: #fff;
         position: sticky;
@@ -17,5 +20,11 @@
         font-size: 13px;
         margin-left: .5rem;
         color: #627181;
+    }
+    &__weather {
+        flex: none;
+    }
+    &__weather-icon {
+        width: 2.8rem;
     }
 }
