@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PortalModule } from '@angular/cdk/portal';
+import { ModalService } from './services/modal/modal.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -24,6 +29,8 @@ import { TemplatesWidgetRowComponent } from './components/pages/dashboard/widget
 import { MeasurementsWidgetRowComponent } from './components/pages/dashboard/widgets/measurements-widget/measurements-widget-row/measurements-widget-row.component';
 import { DeliveriesWidgetGroupComponent } from './components/pages/dashboard/widgets/deliveries-widget/deliveries-widget-group/deliveries-widget-group.component';
 import { DeliveriesWidgetItemComponent } from './components/pages/dashboard/widgets/deliveries-widget/deliveries-widget-group/deliveries-widget-item/deliveries-widget-item.component';
+import { ModalComponent } from './components/shared/modal/modal.component';
+import { TestContentComponent } from './components/shared/test-content/test-content.component';
 
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -59,15 +66,20 @@ const appRoutes: Routes = [
     MeasurementsWidgetRowComponent,
     DeliveriesWidgetGroupComponent,
     DeliveriesWidgetItemComponent,
+    ModalComponent,
+    TestContentComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    OverlayModule,
+    PortalModule,
     AppRoutingModule,
     RouterModule.forRoot(
       appRoutes, {enableTracing: true}  // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [ModalService],
   bootstrap: [AppComponent]
 })
 
