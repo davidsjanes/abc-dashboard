@@ -22,6 +22,8 @@ import { DeliveriesComponent } from './components/pages/deliveries/deliveries.co
 import { OrdersWidgetRowComponent } from './components/pages/dashboard/widgets/orders-widget/orders-widget-row/orders-widget-row.component';
 import { TemplatesWidgetRowComponent } from './components/pages/dashboard/widgets/templates-widget/templates-widget-row/templates-widget-row.component';
 import { MeasurementsWidgetRowComponent } from './components/pages/dashboard/widgets/measurements-widget/measurements-widget-row/measurements-widget-row.component';
+import { DeliveriesWidgetGroupComponent } from './components/pages/dashboard/widgets/deliveries-widget/deliveries-widget-group/deliveries-widget-group.component';
+import { DeliveriesWidgetItemComponent } from './components/pages/dashboard/widgets/deliveries-widget/deliveries-widget-group/deliveries-widget-item/deliveries-widget-item.component';
 
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -54,7 +56,9 @@ const appRoutes: Routes = [
     QuotesComponent,
     OrdersWidgetRowComponent,
     TemplatesWidgetRowComponent,
-    MeasurementsWidgetRowComponent
+    MeasurementsWidgetRowComponent,
+    DeliveriesWidgetGroupComponent,
+    DeliveriesWidgetItemComponent,
   ],
   imports: [
     BrowserModule,

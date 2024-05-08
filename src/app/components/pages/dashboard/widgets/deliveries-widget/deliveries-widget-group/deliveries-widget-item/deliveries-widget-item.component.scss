@@ -1,0 +1,22 @@
+.deliveries-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e7e9ec;
+    transition: background-color .15s ease;
+    &:hover {
+        cursor: pointer;
+        background-color: #f8f9fa;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+    &__job-name {
+        line-height: 1.2;
+    }
+    &__time {
+        font-size: 1.2rem;
+        color: #627181;
+    }
+}
