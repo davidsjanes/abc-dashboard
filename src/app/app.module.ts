@@ -14,7 +14,7 @@ import { DeliveriesWidgetComponent } from './components/pages/dashboard/widgets/
 import { TemplatesWidgetComponent } from './components/pages/dashboard/widgets/templates-widget/templates-widget.component';
 import { MeasurementsWidgetComponent } from './components/pages/dashboard/widgets/measurements-widget/measurements-widget.component';
 import { OrdersComponent } from './components/pages/orders/orders.component';
-import { AccountComponent } from './components/account/account.component';
+import { AccountComponent } from './components/pages/account/account.component';
 import { MeasurementsComponent } from './components/pages/measurements/measurements.component';
 import { QuotesComponent } from './components/pages/quotes/quotes.component';
 import { TemplatesComponent } from './components/pages/templates/templates.component';
