@@ -9,6 +9,7 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        container: widgets / inline-size;
     }
     &__row {
         display: flex;
@@ -69,6 +70,7 @@
 .widget {
     height: 40rem;
     overflow: hidden;
+    width: 100%;
     &--main {
         height: 50rem;
     }
@@ -76,4 +78,13 @@
 
 .alert {
     margin: 0;
+}
+
+@container widgets (max-width: 800px) {
+    .dashboard__row {
+        flex-direction: column;
+    }
+    .widget {
+        max-height: 48rem;
+    }
 }
