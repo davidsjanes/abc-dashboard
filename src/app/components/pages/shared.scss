@@ -16,6 +16,41 @@
         flex-direction: column;
         gap: 2rem;
     }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 1rem 0 0 0;
+    }
+    &__list {
+        border: 1px solid #d9dce1;
+        border-radius: 4px;
+        background-color: #fff;
+        overflow: hidden;
+        border-top: 2px solid #217AB5;
+    }
+    &__filters {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        border-radius: 4px;
+        & .form__group {
+            padding: 0;
+        }
+        & .actions, & .filters {
+            display: flex;
+            flex: 1;
+            gap: 2rem;
+        }
+        & .actions {
+            flex: none;
+        }
+        & .search {
+            width: 100%;
+            max-width: 32rem;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -23,3 +58,4 @@
         padding: 3rem 2rem
     }
 }
+

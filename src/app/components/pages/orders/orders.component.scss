@@ -1,2 +1,20 @@
 @import '../shared.scss';
 
+.orders {
+    &__status, &__total, &__menu {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__type-badge {
+        background-color: #ebedef;
+        color: #292F36;
+    }
+}
+
+.grid-list {
+    &__content {
+        grid-template-columns: 1fr 1.5fr 12rem 1fr 1fr .5fr 12rem 4rem;
+        grid-template-rows: 1fr;
+    }
+}

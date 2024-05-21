@@ -31,6 +31,7 @@ import { DeliveriesWidgetGroupComponent } from './components/pages/dashboard/wid
 import { DeliveriesWidgetItemComponent } from './components/pages/dashboard/widgets/deliveries-widget/deliveries-widget-group/deliveries-widget-item/deliveries-widget-item.component';
 import { ModalComponent } from './components/shared/modal/modal.component';
 import { TestContentComponent } from './components/shared/test-content/test-content.component';
+import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-row.component';
 
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -68,6 +69,7 @@ const appRoutes: Routes = [
     DeliveriesWidgetItemComponent,
     ModalComponent,
     TestContentComponent,
+    OrdersRowComponent,
   ],
   imports: [
     BrowserModule,
