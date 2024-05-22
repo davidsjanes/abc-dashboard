@@ -80,11 +80,6 @@ a {
     flex: none;
 }
 
-.modal {
-    display: block;
-    background-color: white;
-}
-
 .tab {
     &__nav {
         gap: 2rem;
@@ -152,4 +147,9 @@ a {
     &__append {
         padding: 0;
     }
+}
+
+.modal-backdrop {
+    opacity: .1;
+    z-index: 100;
 }
