@@ -80,9 +80,18 @@ a {
     flex: none;
 }
 
-.modal {
-    display: block;
-    background-color: white;
+.tab {
+    &__nav {
+        gap: 2rem;
+    }
+    &__link {
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
+    }
+    &__item {
+        margin: 0;
+    }
 }
 
 .grid-list {
@@ -93,6 +102,8 @@ a {
         padding-top: 2rem;
         padding: 2rem 2rem 0 2rem;
         container: gridlist / inline-size;
+        position: sticky;
+        top: 0;
         & .grid-list__content {
             padding: 0 0 1rem 0;
         }
@@ -136,4 +147,9 @@ a {
     &__append {
         padding: 0;
     }
+}
+
+.modal-backdrop {
+    opacity: .1;
+    z-index: 100;
 }

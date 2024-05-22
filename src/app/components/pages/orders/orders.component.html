@@ -2,9 +2,30 @@
     <div class="page__container">
         <div class="page__header">
             <div class="page__title">
-                <h1>Orders</h1>
+                <h1 class="page__heading">Orders</h1>
+                <div class="page__actions"></div>
             </div>
-            <div class="page__actions"></div>
+            <div class="page__tabs">
+                <div class="tab">
+                    <ul class="nav tab__nav" id="tabNav">
+                        <li class="tab__item">
+                            <a class="tab__link is-active" id="home-tab" data-toggle="tab" role="tab" aria-selected="true">All</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="profile-tab" data-toggle="tab" role="tab" aria-selected="false">Drafts</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="contact-tab" data-toggle="tab" role="tab" aria-selected="false">Open</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="contact-tab" data-toggle="tab" role="tab" aria-selected="false">Completed</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="contact-tab" data-toggle="tab" role="tab" aria-selected="false">For Approval</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="page__body">
             <div class="page__content">
