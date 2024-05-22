@@ -1,3 +1,102 @@
 <div class="orders page">
-    <h1>Orders</h1>
+    <div class="page__container">
+        <div class="page__header">
+            <div class="page__title">
+                <h1>Orders</h1>
+            </div>
+            <div class="page__actions"></div>
+        </div>
+        <div class="page__body">
+            <div class="page__content">
+                <div class="orders__header">
+                    <div class="page__filters">
+                        <div class="filters">
+                            <div class="search">
+                                <div class="search__form">
+                                    <div class="form__group">
+                                        <div class="form__add-on">
+                                            <input class="form__element form--small" type="text" id="formAddOnField" placeholder="Search Orders...">
+                                            <span class="form__append">
+                                                <span class="search__icon">
+                                                    <img src="../../../assets/icons/search.svg" alt="Search">
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn--text u-p-0" (click)="openFilters()">
+                                <img class="filters__icon" src="../../../../assets/icons/filter-sliders.svg" alt="Filter List">
+                                <span>Filter List</span>
+                            </button>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn--outline btn--small">Export</button>
+                            <button class="btn btn--primary btn--small">Create New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="orders__body">
+                    <div class="page__list orders__list">
+                        <div class="grid-list__header">
+                            <div class="grid-list__content">
+                                <div class="grid-list__label orders__name">
+                                    <span class="grid-list__data">Name</span>
+                                </div>
+                                <div class="grid-list__label orders__last-modified">
+                                    <span class="grid-list__data">Last Modified By</span>
+                                </div>
+                                <div class="grid-list__label orders__order-type">
+                                    <span class="grid-list__data">Order Type</span>
+                                </div>
+                                <div class="grid-list__label orders__po-number">
+                                    <span class="grid-list__data">PO Number</span>
+                                </div>
+                                <div class="grid-list__label orders__date-created">
+                                    <span class="grid-list__data">Date Created</span>
+                                </div>
+                                <div class="grid-list__label orders__total">
+                                    <span class="grid-list__data">Total</span>
+                                </div>
+                                <div class="grid-list__label orders__status">
+                                    <span class="grid-list__data">Status</span>
+                                </div>
+                                <div class="grid-list__label orders__menu">
+                                    <span class="grid-list__data"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="grid-list__list">
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                            <app-orders-row></app-orders-row>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page__footer">
+            <div class="pagination">
+                <a class="btn btn--text pagination__btn first disabled">First</a>
+                <a class="btn btn--text pagination__btn previous disabled">Prev</a>
+                <span class="pagination__links">
+                    <a class="pagination__btn is-active">1</a>
+                    <a class="pagination__btn">2</a>
+                    <a class="pagination__btn">3</a>
+                    <a class="pagination__btn">4</a>
+                </span>
+                <a class="btn btn--text pagination__btn next">Next</a>
+                <a class="btn btn--text pagination__btn last">Last</a>
+            </div>    
+        </div>
+    </div>
 </div>

@@ -37,6 +37,7 @@
     &__greeting {
         margin: 0;
         font-variation-settings: "wght" 200;
+        line-height: 1;
         color: #003164;
     }
     &__company {
@@ -52,6 +53,7 @@
     }
     &__weather-icon {
         width: 4rem;
+        top: 3px;
     }
     &__weather-text {
         display: flex;
@@ -59,11 +61,12 @@
         gap: .5rem;
     }
     &__weather-location {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 1.05;
     }
     &__weather-temperature {
         font-size: 2.5rem;
-        line-height: 1.3;
+        line-height: 1;
     }
 }
 
