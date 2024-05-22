@@ -21,6 +21,12 @@ $menu: 2rem;
     }
 }
 
+.search {
+    & .form__append {
+        min-width: 3.6rem;
+    }
+}
+
 .grid-list {
     &__content {
         grid-template-columns: $name $last-modified $order-type $po-number $date-created $total $status $menu;

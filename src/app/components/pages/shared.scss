@@ -18,9 +18,16 @@
     }
     &__header {
         display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &__title {
+        display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        padding: 1rem 0 0 0;
+    }
+    &__tabs {
+        border-bottom: 1px solid #ccc;
     }
     &__list {
         border: 1px solid #d9dce1;
@@ -33,7 +40,7 @@
         display: flex;
         gap: 1.5rem;
         justify-content: space-between;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         border-radius: 4px;
         & .form__group {
             padding: 0;
