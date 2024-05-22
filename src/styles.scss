@@ -93,6 +93,8 @@ a {
         padding-top: 2rem;
         padding: 2rem 2rem 0 2rem;
         container: gridlist / inline-size;
+        position: sticky;
+        top: 0;
         & .grid-list__content {
             padding: 0 0 1rem 0;
         }
