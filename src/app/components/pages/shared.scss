@@ -41,7 +41,7 @@
         & .actions, & .filters {
             display: flex;
             flex: 1;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         & .actions {
             flex: none;
@@ -49,6 +49,12 @@
         & .search {
             width: 100%;
             max-width: 32rem;
+        }
+        & .filters {
+            &__icon {
+                width: 2rem;
+                margin-right: .5rem;
+            }
         }
     }
 }

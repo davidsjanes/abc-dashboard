@@ -4,9 +4,7 @@
             <div class="page__title">
                 <h1>Orders</h1>
             </div>
-            <div class="page__actions">
-                
-            </div>
+            <div class="page__actions"></div>
         </div>
         <div class="page__body">
             <div class="page__content">
@@ -27,10 +25,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn--text u-p-0">Filter List</button>
+                            <button class="btn btn--text u-p-0" (click)="openFilters()">
+                                <img class="filters__icon" src="../../../../assets/icons/filter-sliders.svg" alt="Filter List">
+                                <span>Filter List</span>
+                            </button>
                         </div>
                         <div class="actions">
-                            <button class="btn btn--text u-p-0">Reset Filters</button>
                             <button class="btn btn--outline btn--small">Export</button>
                             <button class="btn btn--primary btn--small">Create New</button>
                         </div>
@@ -40,29 +40,29 @@
                     <div class="page__list orders__list">
                         <div class="grid-list__header">
                             <div class="grid-list__content">
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__name">Name</span>
+                                <div class="grid-list__label orders__name">
+                                    <span class="grid-list__data">Name</span>
                                 </div>
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__last-modified">Last Modified By</span>
+                                <div class="grid-list__label orders__last-modified">
+                                    <span class="grid-list__data">Last Modified By</span>
                                 </div>
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__order-type">Order Type</span>
+                                <div class="grid-list__label orders__order-type">
+                                    <span class="grid-list__data">Order Type</span>
                                 </div>
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__po-number">PO Number</span>
+                                <div class="grid-list__label orders__po-number">
+                                    <span class="grid-list__data">PO Number</span>
                                 </div>
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__date-created">Date Created</span>
+                                <div class="grid-list__label orders__date-created">
+                                    <span class="grid-list__data">Date Created</span>
                                 </div>
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__total">Total</span>
+                                <div class="grid-list__label orders__total">
+                                    <span class="grid-list__data">Total</span>
                                 </div>
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__status">Status</span>
+                                <div class="grid-list__label orders__status">
+                                    <span class="grid-list__data">Status</span>
                                 </div>
-                                <div class="grid-list__label">
-                                    <span class="grid-list__data orders__menu"></span>
+                                <div class="grid-list__label orders__menu">
+                                    <span class="grid-list__data"></span>
                                 </div>
                             </div>
                         </div>
