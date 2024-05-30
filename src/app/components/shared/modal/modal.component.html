@@ -1,5 +1,5 @@
-<div class="modal-overlay" (click)="onBackdropClick()">
-    <div class="modal" (click)="$event.stopPropagation()">
-      <ng-template #modalContent></ng-template>
-    </div>
+<div class="modal-overlay" (click)="closeModalInstance()"></div>
+<div class="modal" [ngClass]="classes" [@slideInOut]="animationState" (@slideInOut.done)="onAnimationDone($event)" (click)="$event.stopPropagation()">
+    <button class="btn btn--primary" (click)="closeModalInstance()">Close Modal</button>
+    <ng-template #modalContent></ng-template>
 </div>

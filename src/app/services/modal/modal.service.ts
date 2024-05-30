@@ -11,27 +11,28 @@ export const MODAL_DATA = new InjectionToken<any>('MODAL_DATA');
 
 export class ModalService {
   private overlayRef: OverlayRef;
+  private componentRef: ComponentRef<ModalComponent>;
 
   constructor(private overlay: Overlay, private injector: Injector) {}
 
-  open(component: any, componentData: any = {}, cssClasses: string[] = []): void {
+  open(component: any, componentData: any = {}, cssClasses: string[] = [], type: any = 'default', size: any = 'default', position: any = 'left'): void {
     this.overlayRef = this.overlay.create({
       hasBackdrop: true,
       backdropClass: 'modal-backdrop',
       panelClass: cssClasses,
       scrollStrategy: this.overlay.scrollStrategies.block(),
-      positionStrategy: this.overlay.position()
-        .global()
-        .centerHorizontally()
-        .centerVertically()
     });
 
     const injector = this.createInjector(componentData);
     const portal = new ComponentPortal(ModalComponent, null, injector);
-    const componentRef: ComponentRef<ModalComponent> = this.overlayRef.attach(portal);
+    this.componentRef = this.overlayRef.attach(portal);
 
-    componentRef.instance.childComponentType = component;
-    componentRef.instance.closeModal.subscribe(() => this.close());
+    this.componentRef.instance.childComponentType = component;
+    this.componentRef.instance.type = type;
+    this.componentRef.instance.size = size;
+    this.componentRef.instance.position = position;
+    this.componentRef.instance.closeModal.subscribe(() => this.disposeOverlay());
+
   }
 
   private createInjector(data: any): Injector {
@@ -42,41 +43,14 @@ export class ModalService {
   }
 
   close(): void {
+    if (this.componentRef) {
+      this.componentRef.instance.close();
+    }
+  }
+
+  private disposeOverlay(): void {
     if (this.overlayRef) {
       this.overlayRef.dispose();
     }
   }
 }
-
-
-// import { Injectable, ComponentRef, Injector, Type } from '@angular/core';
-// import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
-// import { ComponentPortal } from '@angular/cdk/portal';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class ModalService {
-//   constructor(private overlay: Overlay, private injector: Injector) {}
-
-//   open<T>(component: Type<T>, config?: OverlayConfig): OverlayRef {
-//     const overlayConfig = this.getOverlayConfig(config);
-//     const overlayRef = this.overlay.create(overlayConfig);
-//     const componentPortal = new ComponentPortal(component, null, this.injector);
-//     const componentRef: ComponentRef<T> = overlayRef.attach(componentPortal);
-
-//     // Allow the component to close itself
-//     componentRef.instance['close'] = () => overlayRef.detach();
-
-//     return overlayRef;
-//   }
-
-//   private getOverlayConfig(config?: OverlayConfig): OverlayConfig {
-//     return {
-//       hasBackdrop: true,
-//       backdropClass: 'modal__backdrop',
-//       panelClass: 'modal',
-//       ...config
-//     };
-//   }
-// }
