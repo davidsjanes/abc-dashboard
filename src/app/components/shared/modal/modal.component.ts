@@ -1,4 +1,5 @@
-import { Component, Inject, Input, OnDestroy, ViewChild, ViewContainerRef, EventEmitter, Output, OnInit, ComponentFactoryResolver } from '@angular/core';
+import { Component, Inject, Input, ViewChild, ViewContainerRef, EventEmitter, Output, AfterViewInit, OnDestroy, ComponentRef, Injector } from '@angular/core';
+import { trigger, state, style, animate, transition, AnimationEvent } from '@angular/animations';
 import { MODAL_DATA } from 'src/app/services/modal/modal.service';
 
 @Component({
@@ -6,30 +7,79 @@ import { MODAL_DATA } from 'src/app/services/modal/modal.service';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
   animations: [
-    // add animations here
+    trigger('slideInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+      state('out', style({ transform: 'translateX(-100%)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('300ms ease-in', style({ transform: 'translateX(0)' }))
+      ]),
+      transition('in => out', [
+        animate('300ms ease-out')
+      ])
+    ])
   ]
 })
 
-export class ModalComponent implements OnInit, OnDestroy {
+export class ModalComponent implements AfterViewInit, OnDestroy {
   @Input() childComponentType: any;
   @Output() closeModal = new EventEmitter<void>();
   @ViewChild('modalContent', { read: ViewContainerRef, static: true }) modalContent: ViewContainerRef;
+  @Input() type: 'default' | 'panel' = 'default';
+  @Input() size: 'default' | 'small' | 'large' = 'default';
+  @Input() position: 'left' | 'right' = 'left';
 
-  constructor(
-    @Inject(MODAL_DATA) public data: any
-  ) {}
+  animationState: 'in' | 'out' = 'in';
+  private componentRef!: ComponentRef<any>;
 
-  ngOnInit(): void {
-    this.modalContent.clear();
-    const componentRef = this.modalContent.createComponent(this.childComponentType);
-    Object.assign(componentRef.instance, this.data); // Pass data to the created component instance
+  public get classes(): string[] {
+    return ['modal', `modal--${this.type}`, `modal--${this.size}`, `modal--${this.position}`];
+  }
+  
+  constructor(@Inject(MODAL_DATA) public data: any, private injector: Injector) {}
+
+  ngAfterViewInit(): void {
+    this.loadChildComponent();
   }
 
   ngOnDestroy(): void {
-    this.modalContent.clear();
+    // Clean up dynamically created component and container
+    if (this.modalContent) {
+      this.modalContent.clear();
+    }
+    if (this.componentRef) {
+      this.componentRef.destroy();
+    }
   }
 
-  onBackdropClick(): void {
-    this.closeModal.emit();
+  private loadChildComponent(): void {
+    if (this.modalContent) {
+      try {
+        this.modalContent.clear();
+        this.componentRef = this.modalContent.createComponent(this.childComponentType, {
+          injector: this.injector
+        });
+        Object.assign(this.componentRef.instance, this.data);
+      } catch (error) {
+        console.error('Error creating dynamic component:', error);
+      }
+    } else {
+      console.error('modalContent is not defined.');
+    }
   }
+
+  closeModalInstance(): void {
+    this.close();
+  }
+
+  close(): void {
+    this.animationState = 'out';
+  }
+
+  onAnimationDone(event: AnimationEvent): void {
+    if (event.toState === 'out') {
+      this.closeModal.emit();
+    }
+  }
+
 }

@@ -13,7 +13,7 @@ export class OrdersComponent {
   constructor(private ModalService: ModalService) {}
 
   openFilters() {
-    this.ModalService.open(TestContentComponent, ['custom-css-class']);
+    this.ModalService.open(TestContentComponent, [], ['custom-css-class'], ['panel'], ['large']);
   }
 
 }
