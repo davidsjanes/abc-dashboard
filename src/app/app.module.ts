@@ -32,6 +32,7 @@ import { DeliveriesWidgetItemComponent } from './components/pages/dashboard/widg
 import { ModalComponent } from './components/shared/modal/modal.component';
 import { TestContentComponent } from './components/shared/test-content/test-content.component';
 import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-row.component';
+import { FiltersComponent } from './components/pages/orders/filters/filters.component';
 
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -70,6 +71,7 @@ const appRoutes: Routes = [
     ModalComponent,
     TestContentComponent,
     OrdersRowComponent,
+    FiltersComponent,
   ],
   imports: [
     BrowserModule,

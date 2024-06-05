@@ -7,15 +7,15 @@ import { MODAL_DATA } from 'src/app/services/modal/modal.service';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
   animations: [
-    trigger('slideInOut', [
+    trigger('slideInOutLeft', [
       state('in', style({ transform: 'translateX(0)' })),
       state('out', style({ transform: 'translateX(-100%)' })),
       transition(':enter', [
         style({ transform: 'translateX(-100%)' }),
-        animate('300ms ease-in', style({ transform: 'translateX(0)' }))
+        animate('500ms ease', style({ transform: 'translateX(0)' }))
       ]),
       transition('in => out', [
-        animate('300ms ease-out')
+        animate('500ms ease')
       ])
     ])
   ]
