@@ -1,7 +1,21 @@
-<div class="modal panel panel--left" [ngClass]="classes" [@slideInOutLeft]="animationState" (@slideInOutLeft.done)="onAnimationDone($event)" (click)="closeModalInstance()">
+<div class="modal" 
+    [ngClass]="classes" 
+    [@modalAnimate]="{
+        value: animationState,
+        params: {
+            enterPosition: 'translateX(0)',
+            leavePosition: endPosition,
+            enterOpacity: '1',
+            leaveOpacity: modalType === 'window' ? '0' : '1',
+            enterScale: '1',
+            leaveScale: modalType === 'window' ? '.8' : '1'
+        }
+    }"
+    (@modalAnimate.done)="onAnimationDone($event)"
+    (click)="closeModalInstance()">
     <div class="modal__dialog" role="document" (click)="$event.stopPropagation()">
         <div class="modal__content">
-            <div class="modal__top-bar">
+            <div class="modal__top-bar" *ngIf="modalType === 'panel'">
                 <button class="btn btn--text u-p-0 u-text-c-white" (click)="closeModalInstance()">Close</button>
             </div>
             <div class="modal__header">
