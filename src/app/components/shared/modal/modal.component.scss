@@ -3,31 +3,43 @@
 }
 
 .modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 48rem;
-    z-index: 500;
-    display: flex;
-    background: #fff;
-    padding: 2rem;
+    display: block;
+    &__top-bar {
+        background-color: #003e7e;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1.5rem 2rem;
+    }
+    &__header {
+        height: 6rem;
+    }
+    &__title {
+        font-weight: 400;
+        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
+    }
+    &__body {
+        padding: 2rem;
+        background-color: #f5f6f7;
+    }
+    &__footer {
+        & .btn-group {
+            display: flex;
+            gap: 1.5rem;
+        }
+        & .btn-group .btn+.btn {
+            margin-left: 0;
+        }
+    }
+    &--small {
+        & .modal__content {
+            max-width: 48rem;
+        }
+    }
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    background: none;
-    z-index: 400;
-  }
-  
-  .modal-content {
-    
-  }
+.panel {
+    animation: none !important;
+}
 
 //   @keyframes fadeIn {
 //     from {

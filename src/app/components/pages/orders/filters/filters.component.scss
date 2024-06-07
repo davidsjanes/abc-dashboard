@@ -1,0 +1,40 @@
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    &__section {
+        border: 1px solid #d9dce1;
+        border-radius: 4px;
+        background-color: #fff;
+        overflow: hidden;
+        // border-top: 2px solid #217AB5;
+    }
+    &__section-header {
+        padding: 1.25rem 2rem .5rem 2rem;
+        border-bottom: 1px solid #e7e9ec;
+    }
+    &__section-title {
+        font-weight: 400;
+        font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500;
+        padding: 0;
+        margin: 0;
+    }
+    &__section-body {
+        padding: .5rem 2rem;
+    }
+    &__check-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__check-item {
+        flex-basis: 50%;
+    }
+}
+
+.form__append {
+    min-width: 3.6rem;
+    & .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}

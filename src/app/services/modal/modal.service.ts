@@ -32,7 +32,6 @@ export class ModalService {
     this.componentRef.instance.size = size;
     this.componentRef.instance.position = position;
     this.componentRef.instance.closeModal.subscribe(() => this.disposeOverlay());
-
   }
 
   private createInjector(data: any): Injector {

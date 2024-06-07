@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalService } from 'src/app/services/modal/modal.service';
-import { TestContentComponent } from 'src/app/components/shared/test-content/test-content.component';
+import { FiltersComponent } from './filters/filters.component';
 
 @Component({
   selector: 'app-orders',
@@ -13,7 +13,7 @@ export class OrdersComponent {
   constructor(private ModalService: ModalService) {}
 
   openFilters() {
-    this.ModalService.open(TestContentComponent, [], ['custom-css-class'], ['panel'], ['large']);
+    this.ModalService.open(FiltersComponent, [], ['filters'], ['panel'], ['small'], ['left']);
   }
 
 }
