@@ -5,6 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PortalModule } from '@angular/cdk/portal';
 import { ModalService } from './services/modal/modal.service';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ResizableDirective } from './directives/resizable.directive';
+import { GridsterModule } from 'angular-gridster2';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
@@ -33,6 +36,8 @@ import { ModalComponent } from './components/shared/modal/modal.component';
 import { TestContentComponent } from './components/shared/test-content/test-content.component';
 import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-row.component';
 import { FiltersComponent } from './components/pages/orders/filters/filters.component';
+import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboard-poc.component';
+import { WidgetComponent } from './components/pages/dashboard-poc/widgets/widget/widget.component';
 
 const appRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -42,7 +47,7 @@ const appRoutes: Routes = [
   {path: 'templates', component: TemplatesComponent},
   {path: 'quotes', component: QuotesComponent},
   {path: 'measurements', component: MeasurementsComponent},
-  {path: 'account', component: AccountComponent}
+  {path: 'account', component: DashboardPocComponent}
 ];
 
 @NgModule({
@@ -72,6 +77,9 @@ const appRoutes: Routes = [
     TestContentComponent,
     OrdersRowComponent,
     FiltersComponent,
+    DashboardPocComponent,
+    ResizableDirective,
+    WidgetComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +87,8 @@ const appRoutes: Routes = [
     OverlayModule,
     PortalModule,
     AppRoutingModule,
+    DragDropModule,
+    GridsterModule,
     RouterModule.forRoot(
       appRoutes, {enableTracing: true}  // <-- debugging purposes only
     )

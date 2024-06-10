@@ -1,0 +1,26 @@
+<div class="dashboard page">
+    <div class="page__container">
+        <div class="dashboard__header">
+            <div class="dashboard__welcome">
+                <span class="dashboard__company">Redline Roofing</span>
+                <h1 class="dashboard__greeting">Hello, John</h1>
+            </div>
+            <div class="dashboard__weather">
+                <div class="dashboard__weather-text">
+                    <span class="dashboard__weather-location">Beloit, WI</span>
+                    <span class="dashboard__weather-temperature">&nbsp;73&deg;</span>
+                </div>
+                <img class="dashboard__weather-icon" src="../../../../assets/icons/weather-partly-cloudy.svg" alt="Partly Cloudy" />
+            </div>
+        </div>
+        <div class="dashboard__widgets">
+            <div class="widgets">
+                <gridster [options]="options">
+                    <gridster-item *ngFor="let widget of widgets" [item]="widget">
+                      <app-widget [widget]="widget"></app-widget>
+                    </gridster-item>
+                </gridster>
+            </div>
+        </div>
+    </div>
+</div>
