@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "abc-dashboard:build:production"
+              "buildTarget": "abc-dashboard:build:production"
             },
             "development": {
-              "browserTarget": "abc-dashboard:build:development"
+              "buildTarget": "abc-dashboard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "abc-dashboard:build"
+            "buildTarget": "abc-dashboard:build"
           }
         },
         "test": {
