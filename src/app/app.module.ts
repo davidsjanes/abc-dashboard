@@ -5,8 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PortalModule } from '@angular/cdk/portal';
 import { ModalService } from './services/modal/modal.service';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ResizableDirective } from './directives/resizable.directive';
 import { GridsterModule } from 'angular-gridster2';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -87,7 +85,7 @@ const appRoutes: Routes = [
     OverlayModule,
     PortalModule,
     AppRoutingModule,
-    DragDropModule,
+    // DragDropModule,
     GridsterModule,
     RouterModule.forRoot(
       appRoutes, {enableTracing: true}  // <-- debugging purposes only
