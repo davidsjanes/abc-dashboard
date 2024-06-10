@@ -37,17 +37,6 @@ import { FiltersComponent } from './components/pages/orders/filters/filters.comp
 import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboard-poc.component';
 import { WidgetComponent } from './components/pages/dashboard-poc/widgets/widget/widget.component';
 
-const appRoutes: Routes = [
-  {path: '', component: DashboardComponent},
-  {path: 'home', component: DashboardComponent},
-  {path: 'orders', component: OrdersComponent},
-  {path: 'deliveries', component: DeliveriesComponent},
-  {path: 'templates', component: TemplatesComponent},
-  {path: 'quotes', component: QuotesComponent},
-  {path: 'measurements', component: MeasurementsComponent},
-  {path: 'account', component: DashboardPocComponent}
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +65,6 @@ const appRoutes: Routes = [
     OrdersRowComponent,
     FiltersComponent,
     DashboardPocComponent,
-    ResizableDirective,
     WidgetComponent,
   ],
   imports: [
@@ -85,11 +73,8 @@ const appRoutes: Routes = [
     OverlayModule,
     PortalModule,
     AppRoutingModule,
-    // DragDropModule,
     GridsterModule,
-    RouterModule.forRoot(
-      appRoutes, {enableTracing: true}  // <-- debugging purposes only
-    )
+    RouterModule,
   ],
   providers: [ModalService],
   bootstrap: [AppComponent]
