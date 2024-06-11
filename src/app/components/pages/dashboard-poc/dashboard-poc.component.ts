@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { GridsterConfig, GridsterItem } from 'angular-gridster2';
 
 @Component({
@@ -20,14 +19,27 @@ export class DashboardPocComponent {
       resizable: {
         enabled: true,
       },
-      gridType: 'fit',
-      displayGrid: 'onDrag&Resize',
+      pushItems: true,
+      margin: 20,
+      outerMargin: false,
+      gridType: 'verticalFixed',
+      displayGrid: 'none',
+      compactType: 'compactUp',
+      enableBoundaryControl: true,
+      mobileBreakpoint: 640,
+      fixedRowHeight: 400,
+      rowHeightRatio: 1,
+      setGridSize: true,
+      minCols: 2,
+      maxCols: 3,
+      minRows: 1,
+      maxRows: 5,
     };
 
     this.widgets = [
       { x: 0, y: 0, cols: 2, rows: 1 },
-      { x: 2, y: 0, cols: 2, rows: 2 },
-      { x: 4, y: 0, cols: 1, rows: 1 },
+      { x: 1, y: 0, cols: 1, rows: 1 },
+      { x: 1, y: 1, cols: 1, rows: 1 },
     ];
   }
 
