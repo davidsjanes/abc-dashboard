@@ -104,13 +104,9 @@
 }
 
 gridster {
-    position: relative;
-    box-sizing: border-box;
     background: none;
-    width: 100%;
-    height: auto;
-    -webkit-user-select: none;
-    user-select: none;
-    overflow: initial;
-    display: block;
+    &.gridSize {
+        height: inherit;
+        width: inherit;
+    }
 }

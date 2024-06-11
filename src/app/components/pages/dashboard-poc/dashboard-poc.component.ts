@@ -26,20 +26,20 @@ export class DashboardPocComponent {
       displayGrid: 'none',
       compactType: 'compactUp',
       enableBoundaryControl: true,
-      mobileBreakpoint: 640,
+      mobileBreakpoint: 768,
       fixedRowHeight: 400,
       rowHeightRatio: 1,
       setGridSize: true,
       minCols: 2,
       maxCols: 3,
       minRows: 1,
-      maxRows: 5,
+      maxRows: 4,
     };
 
     this.widgets = [
+      { x: 2, y: 0, cols: 1, rows: 2 },
       { x: 0, y: 0, cols: 2, rows: 1 },
-      { x: 1, y: 0, cols: 1, rows: 1 },
-      { x: 1, y: 1, cols: 1, rows: 1 },
+      { x: 0, y: 1, cols: 2, rows: 1 },
     ];
   }
 
