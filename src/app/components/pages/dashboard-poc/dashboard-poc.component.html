@@ -32,7 +32,7 @@
             <div class="widgets">
                 <gridster [options]="options">
                     <gridster-item *ngFor="let widget of widgets" [item]="widget">
-                      <app-widget [widget]="widget"></app-widget>
+                        <ng-container #dynamicWidgetContainer></ng-container>
                     </gridster-item>
                 </gridster>
             </div>
