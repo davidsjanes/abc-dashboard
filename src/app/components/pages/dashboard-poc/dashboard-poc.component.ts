@@ -1,10 +1,13 @@
 import { Component, ViewContainerRef, ViewChildren, QueryList, OnInit, AfterViewInit } from '@angular/core';
 import { GridsterConfig } from 'angular-gridster2';
 import { Widget } from './widgets/widget.model';
+import { ModalService } from 'src/app/services/modal/modal.service';
+import { TestContentComponent } from '../../shared/test-content/test-content.component';
 import { DeliveriesWidgetComponent } from '../dashboard/widgets/deliveries-widget/deliveries-widget.component';
 import { OrdersWidgetComponent } from '../dashboard/widgets/orders-widget/orders-widget.component';
 import { MeasurementsWidgetComponent } from '../dashboard/widgets/measurements-widget/measurements-widget.component';
 import { TemplatesWidgetComponent } from '../dashboard/widgets/templates-widget/templates-widget.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @Component({
   selector: 'app-dashboard-poc',
@@ -17,39 +20,46 @@ export class DashboardPocComponent implements OnInit, AfterViewInit {
 
   @ViewChildren('dynamicWidgetContainer', { read: ViewContainerRef }) containers!: QueryList<ViewContainerRef>;
 
-  constructor() {}
+  constructor(private ModalService: ModalService) {}
 
   ngOnInit(): void {
     this.options = {
       draggable: {
         enabled: true,
+        dragHandleClass: 'drag-handle',
+        ignoreContent: true
       },
       resizable: {
         enabled: true,
       },
       pushItems: true,
+      pushResizeItems: true,
       margin: 20,
       outerMargin: false,
       gridType: 'verticalFixed',
       displayGrid: 'none',
       compactType: 'compactUp',
       enableBoundaryControl: true,
-      mobileBreakpoint: 640,
-      fixedRowHeight: 420,
+      mobileBreakpoint: 768,
+      fixedRowHeight: 480,
       rowHeightRatio: 1,
       setGridSize: true,
       keepFixedHeightInMobile: true,
+      defaultItemRows: 3,
+      defaultItemCols: 12,
       minCols: 2,
-      maxCols: 8,
+      maxCols: 12,
       minRows: 2,
       maxRows: 8,
+      minItemCols: 4,
+      maxItemRows: 3,
     };
 
     this.widgets = [
-      { type: 'orders', config: {}, x: 0, y: 0, cols: 5, rows: 1 },
-      { type: 'deliveries', config: {}, x: 5, y: 0, cols: 3, rows: 1 },
-      { type: 'templates', config: {}, x: 0, y: 1, cols: 4, rows: 1 },
-      { type: 'measurements', config: {}, x: 4, y: 2, cols: 4, rows: 1 },
+      { type: 'orders', config: {}, x: 0, y: 0, cols: 12, rows: 1 },
+      { type: 'deliveries', config: {}, x: 8, y: 1, cols: 4, rows: 2 },
+      { type: 'templates', config: {}, x: 0, y: 1, cols: 8, rows: 1 },
+      { type: 'measurements', config: {}, x: 0, y: 2, cols: 8, rows: 1 },
     ];
   }
 
@@ -84,5 +94,9 @@ export class DashboardPocComponent implements OnInit, AfterViewInit {
   removeItem(item: Widget) {
     this.widgets.splice(this.widgets.indexOf(item), 1);
     this.loadWidgets();
+  }
+
+  openSettingsModal() {
+    this.ModalService.open(SettingsComponent, [], [], ['panel'], ['small'], ['right'], ['Dashboard Settings'], ['Apply Settings']);
   }
 }

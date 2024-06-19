@@ -15,7 +15,7 @@ export class ModalService {
 
   constructor(private overlay: Overlay, private injector: Injector) {}
 
-  open(component: any, componentData: any = {}, cssClasses: string[] = [], type: any = 'default', size: any = 'default', position: any = 'left'): void {
+  open(component: any, componentData: any = {}, cssClasses: string[] = [], type: any = 'default', size: any = 'default', position: any = 'left', title: any = 'Title', confirmText: any = 'Save'): void {
     this.overlayRef = this.overlay.create({
       hasBackdrop: true,
       backdropClass: 'modal-backdrop',
@@ -31,6 +31,8 @@ export class ModalService {
     this.componentRef.instance.type = type;
     this.componentRef.instance.size = size;
     this.componentRef.instance.position = position;
+    this.componentRef.instance.title = title;
+    this.componentRef.instance.confirmText = confirmText;
     this.componentRef.instance.closeModal.subscribe(() => this.disposeOverlay());
   }
 

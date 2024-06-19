@@ -12,6 +12,6 @@ export class OrdersWidgetComponent {
   constructor(private ModalService: ModalService) {}
 
   openTestModal() {
-    this.ModalService.open(TestContentComponent);
+    this.ModalService.open(TestContentComponent, [], [], ['window'], ['small'], []);
   }
 }
