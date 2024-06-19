@@ -42,6 +42,8 @@ export class DashboardPocComponent implements OnInit, AfterViewInit {
       rowHeightRatio: 1,
       setGridSize: true,
       keepFixedHeightInMobile: true,
+      defaultItemRows: 3,
+      defaultItemCols: 12,
       minCols: 2,
       maxCols: 12,
       minRows: 2,

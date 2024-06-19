@@ -13,6 +13,9 @@ $menu: 2rem;
         display: flex;
         justify-content: flex-end;
     }
+    &__menu {
+        align-items: center;
+    }
 }
 
 .grid-list {
