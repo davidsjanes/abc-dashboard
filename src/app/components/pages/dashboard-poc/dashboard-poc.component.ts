@@ -23,34 +23,38 @@ export class DashboardPocComponent implements OnInit, AfterViewInit {
     this.options = {
       draggable: {
         enabled: true,
+        dragHandleClass: 'drag-handle',
+        ignoreContent: true
       },
       resizable: {
         enabled: true,
       },
       pushItems: true,
+      pushResizeItems: true,
       margin: 20,
       outerMargin: false,
       gridType: 'verticalFixed',
       displayGrid: 'none',
       compactType: 'compactUp',
       enableBoundaryControl: true,
-      mobileBreakpoint: 640,
-      fixedRowHeight: 420,
+      mobileBreakpoint: 768,
+      fixedRowHeight: 480,
       rowHeightRatio: 1,
       setGridSize: true,
       keepFixedHeightInMobile: true,
       minCols: 2,
-      maxCols: 8,
+      maxCols: 12,
       minRows: 2,
       maxRows: 8,
-      minItemCols: 3,
+      minItemCols: 4,
+      maxItemRows: 3,
     };
 
     this.widgets = [
-      { type: 'orders', config: {}, x: 0, y: 0, cols: 5, rows: 1 },
-      { type: 'deliveries', config: {}, x: 5, y: 0, cols: 3, rows: 1 },
-      { type: 'templates', config: {}, x: 0, y: 1, cols: 4, rows: 1 },
-      { type: 'measurements', config: {}, x: 4, y: 2, cols: 4, rows: 1 },
+      { type: 'orders', config: {}, x: 0, y: 0, cols: 12, rows: 1 },
+      { type: 'deliveries', config: {}, x: 8, y: 1, cols: 4, rows: 2 },
+      { type: 'templates', config: {}, x: 0, y: 1, cols: 8, rows: 1 },
+      { type: 'measurements', config: {}, x: 0, y: 2, cols: 8, rows: 1 },
     ];
   }
 
