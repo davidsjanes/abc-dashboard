@@ -35,7 +35,6 @@ import { TestContentComponent } from './components/shared/test-content/test-cont
 import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-row.component';
 import { FiltersComponent } from './components/pages/orders/filters/filters.component';
 import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboard-poc.component';
-import { WidgetComponent } from './components/pages/dashboard-poc/widgets/widget/widget.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +64,6 @@ import { WidgetComponent } from './components/pages/dashboard-poc/widgets/widget
     OrdersRowComponent,
     FiltersComponent,
     DashboardPocComponent,
-    WidgetComponent,
   ],
   imports: [
     BrowserModule,

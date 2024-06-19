@@ -68,6 +68,8 @@ export class ModalComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() type: 'window' | 'panel' = 'window';
   @Input() size: 'medium' | 'small' | 'large' = 'medium';
   @Input() position: 'left' | 'right' | 'center' = 'left';
+  @Input() title = '';
+  @Input() confirmText = '';
 
   modalPosition = '';
   modalSize = '';

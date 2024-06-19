@@ -1,10 +1,13 @@
 import { Component, ViewContainerRef, ViewChildren, QueryList, OnInit, AfterViewInit } from '@angular/core';
 import { GridsterConfig } from 'angular-gridster2';
 import { Widget } from './widgets/widget.model';
+import { ModalService } from 'src/app/services/modal/modal.service';
+import { TestContentComponent } from '../../shared/test-content/test-content.component';
 import { DeliveriesWidgetComponent } from '../dashboard/widgets/deliveries-widget/deliveries-widget.component';
 import { OrdersWidgetComponent } from '../dashboard/widgets/orders-widget/orders-widget.component';
 import { MeasurementsWidgetComponent } from '../dashboard/widgets/measurements-widget/measurements-widget.component';
 import { TemplatesWidgetComponent } from '../dashboard/widgets/templates-widget/templates-widget.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @Component({
   selector: 'app-dashboard-poc',
@@ -17,7 +20,7 @@ export class DashboardPocComponent implements OnInit, AfterViewInit {
 
   @ViewChildren('dynamicWidgetContainer', { read: ViewContainerRef }) containers!: QueryList<ViewContainerRef>;
 
-  constructor() {}
+  constructor(private ModalService: ModalService) {}
 
   ngOnInit(): void {
     this.options = {
@@ -91,5 +94,9 @@ export class DashboardPocComponent implements OnInit, AfterViewInit {
   removeItem(item: Widget) {
     this.widgets.splice(this.widgets.indexOf(item), 1);
     this.loadWidgets();
+  }
+
+  openSettingsModal() {
+    this.ModalService.open(SettingsComponent, [], [], ['panel'], ['small'], ['right'], ['Dashboard Settings'], ['Apply Settings']);
   }
 }

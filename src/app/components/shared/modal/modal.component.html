@@ -19,7 +19,7 @@
                 <button class="btn btn--text u-p-0 u-text-c-white" (click)="closeModalInstance()">Close</button>
             </div>
             <div class="modal__header">
-                <h3 class="modal__title" id="leftPanelLabel" tabindex="-1">Filter Orders</h3>
+                <h3 class="modal__title" id="leftPanelLabel" tabindex="-1">{{ title }}</h3>
             </div>
             <div class="modal__body">
                 <div class="modal__body-content">
@@ -29,7 +29,7 @@
             <div class="modal__footer">
                 <div class="btn-group btn-group--inline">
                     <button type="button" class="btn btn--text btn--cancel u-p-0" (click)="closeModalInstance()">Cancel</button>
-                    <button type="button" class="btn btn--primary btn--small" (click)="closeModalInstance()">Filter List</button>
+                    <button type="button" class="btn btn--primary btn--small" (click)="closeModalInstance()">{{ confirmText }}</button>
                 </div>
             </div>
         </div>
