@@ -43,6 +43,7 @@ export class DashboardPocComponent implements OnInit, AfterViewInit {
       maxCols: 8,
       minRows: 2,
       maxRows: 8,
+      minItemCols: 3,
     };
 
     this.widgets = [

@@ -1,16 +1,49 @@
 @import '../shared.scss';
 
+$name: 1fr;
+$last-used: 1fr;
+$date-created: 1fr;
+$last-modified: 1fr;
+$menu: 2rem;
+
 .templates {
-    &__last-modified-by {
+    &__last-modified {
         width: 100%;
         display: flex;
+        text-align: right;
         justify-content: flex-end;
     }
 }
 
 .grid-list {
     &__content {
-        grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+        grid-template-columns: $name $last-used $date-created $last-modified $menu;
         grid-template-rows: 1fr;
+    }
+}
+
+@container gridlist (max-width: 900px) {
+    .grid-list {
+        &__content {
+            grid-template-columns: $name $last-used $last-modified $menu;
+        }
+    }
+    .templates {
+        &__date-created {
+            display: none;
+        }
+    }
+}
+
+@container gridlist (max-width: 480px) {
+    .grid-list {
+        &__content {
+            grid-template-columns: $name $last-modified $menu;
+        }
+    }
+    .templates {
+        &__last-used {
+            display: none;
+        }
     }
 }
