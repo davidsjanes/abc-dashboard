@@ -51,7 +51,7 @@
                                 <span>Filter List</span>
                             </button>
                             <div class="popover-test">
-                                <app-overlay [contentTemplate]="htmlContent" trigger="hover" type="popover" position="right" text="HTML Content">Hover Trigger</app-overlay>
+                                <app-overlay [contentTemplate]="htmlContent" trigger="hover" type="popover" position="bottom" text="HTML Content">Hover Trigger</app-overlay>
                                 <ng-template #htmlContent>
                                     <div>
                                       <strong>HTML Content</strong><br>
@@ -64,7 +64,7 @@
                             <button class="btn btn--outline btn--small">Export</button>
                             <button class="btn btn--primary btn--small">Create New</button>
                             <div class="popover-test">
-                                <app-overlay [contentTemplate]="componentContent" trigger="click" type="tooltip" position="bottom" text="Component Content">Click Trigger</app-overlay>
+                                <app-overlay [contentTemplate]="componentContent" trigger="click" type="tooltip" position="top" text="Component Content">Click Trigger</app-overlay>
                                 <ng-template #componentContent>
                                     <app-test-content></app-test-content>
                                 </ng-template>

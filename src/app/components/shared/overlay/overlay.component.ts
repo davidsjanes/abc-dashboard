@@ -1,13 +1,36 @@
 import { Component, Input, ElementRef, HostListener, TemplateRef, ViewContainerRef, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
 import { Overlay, OverlayRef, ConnectedPosition, ScrollDispatcher } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Subscription, fromEvent } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-overlay',
   templateUrl: './overlay.component.html',
-  styleUrl: './overlay.component.scss'
+  styleUrl: './overlay.component.scss',
+  animations: [
+    trigger('fadeInOut', [
+      state('hidden', style({
+        opacity: 0,
+        scale: .8,
+        visibility: 'hidden'
+      })),
+      state('visible', style({
+        opacity: 1,
+        scale: 1,
+        visibility: 'visible'
+      })),
+      transition('hidden => visible', [
+        style({ visibility: 'visible' }),
+        animate('200ms ease-in')
+      ]),
+      transition('visible => hidden', [
+        animate('200ms ease-out', style({ opacity: 0 })),
+        style({ visibility: 'hidden' })
+      ])
+    ])
+  ]
 })
 
 export class OverlayComponent implements OnDestroy, AfterViewInit {
@@ -23,6 +46,8 @@ export class OverlayComponent implements OnDestroy, AfterViewInit {
   private overlayRef: OverlayRef | null = null;
   private scrollSubscription: Subscription | null = null;
   private documentClickSubscription: Subscription | null = null;
+
+  tooltipVisible = false; // Track the visibility of the tooltip
 
   constructor(
     private overlay: Overlay,
@@ -78,12 +103,16 @@ export class OverlayComponent implements OnDestroy, AfterViewInit {
     }
     const portal = new TemplatePortal(this.overlayTemplate, this.viewContainerRef);
     this.overlayRef.attach(portal);
+    this.tooltipVisible = true;
   }
 
   private hide(): void {
-    if (this.overlayRef) {
-      this.overlayRef.detach();
-    }
+    this.tooltipVisible = false;
+    setTimeout(() => {
+      if (this.overlayRef) {
+        this.overlayRef.detach();
+      }
+    }, 200); // Ensure the tooltip is fully hidden before detaching
   }
 
   private createOverlay(): OverlayRef {
@@ -107,7 +136,7 @@ export class OverlayComponent implements OnDestroy, AfterViewInit {
         originY: 'top',
         overlayX: 'center',
         overlayY: 'bottom',
-        offsetY: -5,
+        offsetY: -10,
       });
     } else if (this.position === 'bottom') {
       positions.push({
@@ -115,7 +144,7 @@ export class OverlayComponent implements OnDestroy, AfterViewInit {
         originY: 'bottom',
         overlayX: 'center',
         overlayY: 'top',
-        offsetY: 5,
+        offsetY: 10,
       });
     } else if (this.position === 'left') {
       positions.push({
@@ -123,7 +152,7 @@ export class OverlayComponent implements OnDestroy, AfterViewInit {
         originY: 'center',
         overlayX: 'end',
         overlayY: 'center',
-        offsetX: -5,
+        offsetX: -10,
       });
     } else if (this.position === 'right') {
       positions.push({
@@ -131,7 +160,7 @@ export class OverlayComponent implements OnDestroy, AfterViewInit {
         originY: 'center',
         overlayX: 'start',
         overlayY: 'center',
-        offsetX: 5,
+        offsetX: 10,
       });
     }
     return positions;

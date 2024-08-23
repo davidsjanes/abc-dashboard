@@ -17,5 +17,47 @@
         padding: 1rem;
         white-space: nowrap;
         font-size: 1.2rem;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            margin: auto;
+            rotate: 45deg;
+            background-color: #333;
+        }
+    }
+    &--popover {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            margin: auto;
+            rotate: 45deg;
+            background-color: #fff;
+        }
+    }
+    &.overlay--bottom:after {
+        top: -.5rem;
+        left: 0;
+        right: 0;
+    }
+    &.overlay--top:after {
+        bottom: -.5rem;
+        left: 0;
+        right: 0;
+    }
+    &.overlay--left:after {
+        right: -.5rem;
+        top: 0;
+        bottom: 0;
+    }
+    &.overlay--right:after {
+        left: -.5rem;
+        top: 0;
+        bottom: 0;
     }
 }
