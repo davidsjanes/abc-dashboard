@@ -1,0 +1,13 @@
+<div class="overlay">
+    <div class="overlay__trigger">
+        <ng-content></ng-content>
+    </div>
+    <ng-template #overlayTemplate>
+        <div class="overlay__content" [@fadeInOut]="tooltipVisible ? 'visible' : 'hidden'" [ngClass]="classes">
+            <ng-container *ngIf="contentTemplate; else textContent">
+                <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+            </ng-container>
+            <ng-template #textContent>{{ text }}</ng-template>
+        </div>
+    </ng-template>
+</div>

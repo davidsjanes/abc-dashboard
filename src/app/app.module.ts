@@ -31,6 +31,7 @@ import { MeasurementsWidgetRowComponent } from './components/pages/dashboard/wid
 import { DeliveriesWidgetGroupComponent } from './components/pages/dashboard/widgets/deliveries-widget/deliveries-widget-group/deliveries-widget-group.component';
 import { DeliveriesWidgetItemComponent } from './components/pages/dashboard/widgets/deliveries-widget/deliveries-widget-group/deliveries-widget-item/deliveries-widget-item.component';
 import { ModalComponent } from './components/shared/modal/modal.component';
+import { OverlayComponent } from './components/shared/overlay/overlay.component';
 import { TestContentComponent } from './components/shared/test-content/test-content.component';
 import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-row.component';
 import { FiltersComponent } from './components/pages/orders/filters/filters.component';
@@ -60,6 +61,7 @@ import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboar
     DeliveriesWidgetGroupComponent,
     DeliveriesWidgetItemComponent,
     ModalComponent,
+    OverlayComponent,
     TestContentComponent,
     OrdersRowComponent,
     FiltersComponent,
