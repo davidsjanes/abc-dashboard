@@ -1,5 +1,5 @@
 .overlay {
-    z-index: 100;
+    z-index: 200;
     &__trigger {
         display: inline-block;
         position: relative;
@@ -39,6 +39,9 @@
             rotate: 45deg;
             background-color: #fff;
         }
+    }
+    &--dropdown {
+        padding: 0;
     }
     &.overlay--bottom:after {
         top: -.5rem;

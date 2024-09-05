@@ -9,8 +9,8 @@ import { MeasurementsComponent } from './components/pages/measurements/measureme
 import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboard-poc.component';
 
 const routes: Routes = [
-  {path: '', component: DashboardComponent},
-  {path: 'home', component: DashboardComponent},
+  {path: '', component: DashboardPocComponent},
+  {path: 'home', component: DashboardPocComponent},
   {path: 'orders', component: OrdersComponent},
   {path: 'deliveries', component: DeliveriesComponent},
   {path: 'templates', component: TemplatesComponent},

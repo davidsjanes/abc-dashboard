@@ -7,6 +7,62 @@
             <img class="menu__logo" src="../../../assets/images/ABC-logo-color.svg" alt="ABC Supply" />
         </div>
     </div>
+    <div class="top-nav__account">
+        <app-overlay [contentTemplate]="accountDropdown" trigger="click" type="dropdown" position="bottom">
+            <div class="account">
+                <div class="account__icon">
+                    <img class="search-alt__icon" src="../../../assets/icons/user.svg" alt="Account" />
+                </div>
+                <div class="account__text">
+                    <!-- <div class="account__welcome">
+                        <span>Welcome, &nbsp;</span>
+                        <span class="account__user">John Doe</span>
+                    </div> -->
+                    <div class="account__customer">
+                        <span class="account__customer-name">Redline Roofing</span>
+                    </div>
+                    <div class="account__number">
+                        <a href="#" class="account__number-link">Account #12345678-1234</a>
+                    </div>
+                </div>
+                <div class="account__link">
+                    <img class="search-alt__icon" src="../../../assets/icons/chevron-down.svg" alt="Open Account" />
+                </div>
+            </div>
+        </app-overlay>
+        <ng-template #accountDropdown>
+            <div class="account-dropdown">
+                <div class="account-dropdown__header">
+                    <h6 class="account-dropdown__title">Account Details</h6>
+                </div>
+                <div class="account-dropdown__body">
+                    <ul class="account-dropdown__list">
+                        <li class="account-dropdown__list-item">
+                            <a href="" class="account-dropdown__link">My Profile</a>
+                        </li>
+                        <li class="account-dropdown__list-item">
+                            <a href="" class="account-dropdown__link">Manage Users</a>
+                        </li>
+                        <li class="account-dropdown__list-item">
+                            <a href="" class="account-dropdown__link">Manage Preferences</a>
+                        </li>
+                        <li class="account-dropdown__list-item">
+                            <a href="" class="account-dropdown__link">Rewards Program</a>
+                        </li>
+                        <li class="account-dropdown__list-item">
+                            <a href="" class="account-dropdown__link">Connect Partners</a>
+                        </li>
+                        <li class="account-dropdown__list-item">
+                            <span class="account-dropdown__divider"></span>
+                        </li>
+                        <li class="account-dropdown__list-item">
+                            <a href="" class="account-dropdown__link">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </ng-template>
+    </div>
     <div class="top-nav__search">
         <div class="search">
             <div class="search__form">
@@ -30,7 +86,7 @@
         <div class="top-nav__divider search-alt"></div>
         <div class="language">
             <img class="language__icon" src="../../../assets/icons/language.svg" alt="Language" />
-            <span class="language__text">English</span>
+            <span class="language__text">En</span>
         </div>
         <div class="top-nav__divider"></div>
         <div class="notifications">
