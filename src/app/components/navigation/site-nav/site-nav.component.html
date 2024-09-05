@@ -1,77 +1,116 @@
 <ul class="site-nav" [ngClass]="{'is-compact': isCompact === true}">
     <li class="site-nav__item">
         <a class="site-nav__link" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/home.svg" alt="Home">
-            </span>
-            <span class="site-nav__text">Home</span>
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/home.svg" alt="Home">
+                </span>
+                <span class="site-nav__text">Home</span>
+            </div>
         </a>
     </li>
     <li class="site-nav__item">
         <a class="site-nav__link">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/products.svg" alt="Products">
-            </span>
-            <span class="site-nav__text">Products</span>
-        </a>
-    </li>
-    <li class="site-nav__item">
-        <a class="site-nav__link" routerLink="/templates" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/templates.svg" alt="Templates">
-            </span>
-            <span class="site-nav__text">Templates</span>
-        </a>
-    </li>
-    <li class="site-nav__item">
-        <a class="site-nav__link" routerLink="/quotes" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/quotes.svg" alt="Quotes">
-            </span>
-            <span class="site-nav__text">Quotes</span>
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/products.svg" alt="Products">
+                </span>
+                <span class="site-nav__text">Products</span>
+            </div>
+            <div class="site-nav__group">
+                <span class="site-nav__icon-alt">
+                    <app-overlay trigger="hover" type="tooltip" position="right" text="Browse Products">
+                        <img src="../../../assets/icons/chevron-right.svg" alt="Browse Products">
+                    </app-overlay>
+                </span>
+            </div>
         </a>
     </li>
     <li class="site-nav__item">
         <a class="site-nav__link" routerLink="/orders" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/orders.svg" alt="Orders">
-            </span>
-            <span class="site-nav__text">Orders</span>
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/orders.svg" alt="Orders">
+                </span>
+                <span class="site-nav__text">Orders</span>
+            </div>
+            <div class="site-nav__group">
+                <span class="site-nav__icon-alt">
+                    <app-overlay trigger="hover" type="tooltip" position="right" text="Create New Order">
+                        <img src="../../../assets/icons/create-new.svg" alt="Create New Order">
+                    </app-overlay>
+                </span>
+            </div>
+        </a>
+    </li>
+    <li class="site-nav__item">
+        <a class="site-nav__link" routerLink="/templates" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/templates.svg" alt="Templates">
+                </span>
+                <span class="site-nav__text">Templates</span>
+            </div>
+            <div class="site-nav__group">
+                <span class="site-nav__icon-alt">
+                    <app-overlay trigger="hover" type="tooltip" position="right" text="Create New Template">
+                        <img src="../../../assets/icons/create-new.svg" alt="Create New Template">
+                    </app-overlay>
+                </span>
+            </div>
+        </a>
+    </li>
+    <li class="site-nav__item">
+        <a class="site-nav__link" routerLink="/quotes" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/quotes.svg" alt="Quotes">
+                </span>
+                <span class="site-nav__text">Quotes</span>
+            </div>
         </a>
     </li>
     <li class="site-nav__item">
         <a class="site-nav__link" routerLink="/deliveries" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/deliveries.svg" alt="Deliveries">
-            </span>
-            <span class="site-nav__text">Deliveries</span>
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/deliveries.svg" alt="Deliveries">
+                </span>
+                <span class="site-nav__text">Deliveries</span>
+            </div>
         </a>
     </li>
     <li class="site-nav__item">
         <a class="site-nav__link" routerLink="/measurements" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/measurements.svg" alt="Measurements">
-            </span>
-            <span class="site-nav__text">Measurements</span>
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/measurements.svg" alt="Measurements">
+                </span>
+                <span class="site-nav__text">Measurements</span>
+            </div>
         </a>
     </li>
     <li class="site-nav__item">
         <a class="site-nav__link">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/invoices.svg" alt="Invoices">
-            </span>
-            <span class="site-nav__text">Invoices</span>
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/invoices.svg" alt="Invoices">
+                </span>
+                <span class="site-nav__text">Invoices</span>
+            </div>
         </a>
     </li>
-    <li class="site-nav__divider">
+    <!-- <li class="site-nav__divider">
         <div class="site-nav__divider-line"></div>
-    </li>
-    <li class="site-nav__item">
+    </li> -->
+    <!-- <li class="site-nav__item">
         <a class="site-nav__link" routerLink="/account" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <span class="site-nav__icon">
-                <img src="../../../assets/icons/account.svg" alt="Account">
-            </span>
-            <span class="site-nav__text">Account</span>
+            <div class="site-nav__group">
+                <span class="site-nav__icon">
+                    <img src="../../../assets/icons/account.svg" alt="Account">
+                </span>
+                <span class="site-nav__text">Account</span>
+            </div>
         </a>
-    </li>
+    </li> -->
 </ul>
