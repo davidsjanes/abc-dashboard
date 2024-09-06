@@ -75,11 +75,11 @@
     }
     &__customer-name {
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     &__number {
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 400;
     }
     &__link {
         width: 2.25rem;
@@ -90,7 +90,7 @@
 }
 
 .account-dropdown {
-    min-width: 24rem;
+    min-width: 26rem;
     &__header {
         padding: 1rem 2rem;
         background-color: #f8f9fa;
@@ -107,7 +107,7 @@
         padding: 0;
     }
     &__list-item {
-        padding: 1rem 2rem;
+        padding: .75rem 2rem;
     }
     &__divider {
         border-bottom: 1px solid #e7e9ec;
@@ -185,6 +185,12 @@
     }
     &__icon {
         width: 2.2rem;
+    }
+}
+
+.form {
+    &__label {
+        font-size: 1rem;
     }
 }
 
