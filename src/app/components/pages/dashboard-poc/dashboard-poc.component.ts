@@ -2,7 +2,6 @@ import { Component, ViewContainerRef, ViewChildren, QueryList, OnInit, AfterView
 import { GridsterConfig } from 'angular-gridster2';
 import { Widget } from './widgets/widget.model';
 import { ModalService } from 'src/app/services/modal/modal.service';
-import { TestContentComponent } from '../../shared/test-content/test-content.component';
 import { DeliveriesWidgetComponent } from '../dashboard/widgets/deliveries-widget/deliveries-widget.component';
 import { OrdersWidgetComponent } from '../dashboard/widgets/orders-widget/orders-widget.component';
 import { MeasurementsWidgetComponent } from '../dashboard/widgets/measurements-widget/measurements-widget.component';
