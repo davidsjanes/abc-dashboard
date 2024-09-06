@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PortalModule } from '@angular/cdk/portal';
 import { ModalService } from './services/modal/modal.service';
+import { SlideoutService } from './services/slideout/slideout.service';
 import { GridsterModule } from 'angular-gridster2';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +37,7 @@ import { TestContentComponent } from './components/shared/test-content/test-cont
 import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-row.component';
 import { FiltersComponent } from './components/pages/orders/filters/filters.component';
 import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboard-poc.component';
+import { SlideoutComponent } from './components/shared/slideout/slideout.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboar
     DeliveriesWidgetGroupComponent,
     DeliveriesWidgetItemComponent,
     ModalComponent,
+    SlideoutComponent,
     OverlayComponent,
     TestContentComponent,
     OrdersRowComponent,
@@ -76,7 +79,7 @@ import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboar
     GridsterModule,
     RouterModule,
   ],
-  providers: [ModalService],
+  providers: [ModalService, SlideoutService],
   bootstrap: [AppComponent]
 })
 
