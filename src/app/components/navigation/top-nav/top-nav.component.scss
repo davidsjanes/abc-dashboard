@@ -60,6 +60,7 @@
 }
 
 .account {
+    min-width: 24rem;
     line-height: 1.25;
     border: 1px solid #e7e9ec;
     border-radius: 6px;
@@ -67,22 +68,33 @@
     background-color: white;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
     transition: background-color .5s ease;
     cursor: pointer;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &__icon {
+        flex: none;
+    }
+    &__text {
+        flex: 1;
+    }
     &__welcome {
         font-size: 1.2rem;
     }
     &__customer-name {
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     &__number {
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 400;
     }
     &__link {
         width: 2.25rem;
+        flex: none;
     }
     &:hover {
         background-color: #f8f9fa;
@@ -107,7 +119,7 @@
         padding: 0;
     }
     &__list-item {
-        padding: 1rem 2rem;
+        padding: .75rem 2rem;
     }
     &__divider {
         border-bottom: 1px solid #e7e9ec;
@@ -185,6 +197,12 @@
     }
     &__icon {
         width: 2.2rem;
+    }
+}
+
+.form {
+    &__label {
+        font-size: 1rem;
     }
 }
 

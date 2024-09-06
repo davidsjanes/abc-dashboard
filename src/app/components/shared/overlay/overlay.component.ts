@@ -64,11 +64,21 @@ export class OverlayComponent implements OnDestroy, AfterViewInit {
     });
     if (this.trigger === 'click') {
       this.documentClickSubscription = fromEvent<MouseEvent>(document, 'click')
-        .pipe(
-          filter(event => !this.elementRef.nativeElement.contains(event.target))
-        )
+      .pipe(
+        filter(event => this.shouldCloseOnClickOutside(event))
+      )
         .subscribe(() => this.hide());
     }
+  }
+
+  private shouldCloseOnClickOutside(event: MouseEvent): boolean {
+    const clickTarget = event.target as HTMLElement;
+    // Check if the click target is inside the trigger element
+    const clickedInsideTrigger = this.elementRef.nativeElement.contains(clickTarget);
+    // Check if the click target is inside the overlay content
+    const clickedInsideOverlay = this.overlayRef && this.overlayRef.overlayElement.contains(clickTarget);
+    // Only close if the click is outside both the trigger and the overlay
+    return !clickedInsideTrigger && !clickedInsideOverlay;
   }
 
   @HostListener('click', ['$event'])

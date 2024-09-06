@@ -6,7 +6,7 @@
 
 .sidebar {
     height: 100%;
-    width: 260px;
+    width: 240px;
     background: linear-gradient(to bottom, #004A97 0%, #003164 100%);
     background-size: 150% 150%;
     transition: width .5s ease;
@@ -16,7 +16,7 @@
         justify-content: center;
         align-items: center;
         flex: none;
-        padding: 6rem 2rem 2rem 2rem;
+        padding: 6rem 1.5rem 2rem 1.5rem;
         transition: padding .5s ease;
     }
     &__content {
@@ -28,13 +28,13 @@
         overflow-x: hidden;
     }
     &__nav {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
         flex: 1;
         transition: padding .5s ease;
     }
     &__actions {
         color: white;
-        padding: 2rem;
+        padding: 2rem 1.5rem;
         transition: padding .5s ease;
     }
     &__link {

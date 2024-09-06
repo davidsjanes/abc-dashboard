@@ -1,5 +1,8 @@
 .site-nav {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     &__link {
         cursor: pointer;
         color: white;
@@ -15,7 +18,7 @@
         &:visited {
             text-decoration: none;
         }
-        &:hover {
+        &:hover, &.is-active {
             background-color: rgba(255, 255, 255, .1);
         }
         &:active {
