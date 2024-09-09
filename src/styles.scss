@@ -187,9 +187,16 @@ a {
     max-width: 100%;
     max-height: 100%;
     &.slideout-nav {
+        transition: left .5s ease;
         position: fixed;
         left: 240px;
         overflow: hidden;
         width: 100%;
+    }
+}
+
+.sidebar-is-compact .cdk-overlay-pane {
+    &.slideout-nav {
+        left: 90px;
     }
 }

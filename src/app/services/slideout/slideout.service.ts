@@ -2,6 +2,7 @@ import { Injectable, ComponentRef} from '@angular/core';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { SlideoutComponent } from 'src/app/components/shared/slideout/slideout.component';
+import { SidebarStateService } from '../navigation/sidebar-state.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import { SlideoutComponent } from 'src/app/components/shared/slideout/slideout.c
 export class SlideoutService {
   private overlayRef: OverlayRef;
   private componentRef: ComponentRef<SlideoutComponent>;
+  isCompact: boolean;
 
   constructor(private overlay: Overlay) {}
 
