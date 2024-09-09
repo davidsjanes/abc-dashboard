@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidebarStateService } from 'src/app/services/navigation/sidebar-state.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,9 +10,11 @@ export class SidebarComponent {
 
   isCompact: boolean = false;
 
+  constructor(private sidebarStateService: SidebarStateService) {}
+
   resizeSidebar() {
     this.isCompact = !this.isCompact;
-    console.log(this.isCompact);
+    this.sidebarStateService.setSidebarMinimized(this.isCompact);
   }
 
 }
