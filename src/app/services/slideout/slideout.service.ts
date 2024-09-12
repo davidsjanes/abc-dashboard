@@ -2,7 +2,6 @@ import { Injectable, ComponentRef} from '@angular/core';
 import { Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { SlideoutComponent } from 'src/app/components/shared/slideout/slideout.component';
-import { SidebarStateService } from '../navigation/sidebar-state.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,7 @@ export class SlideoutService {
 
   open(component: any, cssClasses: string[] = [], title: any = 'Title'): void {
     this.overlayRef = this.overlay.create({
-      hasBackdrop: false,
+      hasBackdrop: true,
       backdropClass: 'slideout-backdrop',
       panelClass: cssClasses,
       scrollStrategy: this.overlay.scrollStrategies.block(),
