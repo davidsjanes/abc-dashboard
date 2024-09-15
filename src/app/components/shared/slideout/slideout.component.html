@@ -1,4 +1,7 @@
-<div class="slideout u-shadow-3" 
+<div class="slideout" (click)="closeSlideoutInstance()">
+    <div class="slideout__container u-shadow-3" 
+    role="document" 
+    (click)="$event.stopPropagation()"
     [@slideoutAnimate]="{
         value: animationState,
         params: {
@@ -6,8 +9,8 @@
             leavePosition: 'translateX(-100%)'
         }
     }"
-    (@slideoutAnimate.done)="onAnimationDone($event)">
-    <div class="slideout__container" role="document" (click)="$event.stopPropagation()">
+    (@slideoutAnimate.done)="onAnimationDone($event)" 
+    >
         <div class="slideout__content">
             <div class="slideout__header">
                 <button class="btn btn--text" (click)="closeSlideoutInstance()">Close</button>

@@ -71,7 +71,7 @@
     justify-content: space-between;
     gap: 1rem;
     transition: background-color .5s ease;
-    cursor: pointer;
+    // cursor: pointer;
     text-wrap: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -97,9 +97,9 @@
         width: 2.25rem;
         flex: none;
     }
-    &:hover {
-        background-color: #f8f9fa;
-    }
+    // &:hover {
+    //     background-color: #f8f9fa;
+    // }
 }
 
 .account-dropdown {
