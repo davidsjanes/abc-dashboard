@@ -10,12 +10,13 @@ import { SlideoutComponent } from 'src/app/components/shared/slideout/slideout.c
 export class SlideoutService {
   private overlayRef: OverlayRef;
   private componentRef: ComponentRef<SlideoutComponent>;
+  isCompact: boolean;
 
   constructor(private overlay: Overlay) {}
 
   open(component: any, cssClasses: string[] = [], title: any = 'Title'): void {
     this.overlayRef = this.overlay.create({
-      hasBackdrop: false,
+      hasBackdrop: true,
       backdropClass: 'slideout-backdrop',
       panelClass: cssClasses,
       scrollStrategy: this.overlay.scrollStrategies.block(),

@@ -62,21 +62,22 @@
 .account {
     min-width: 24rem;
     line-height: 1.25;
-    border: 1px solid #e7e9ec;
-    border-radius: 6px;
-    padding: .75rem 1rem .75rem 1.5rem;
+    // border: 1px solid #e7e9ec;
+    // border-radius: 6px;
+    // padding: .75rem 1rem .75rem 1.5rem;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     transition: background-color .5s ease;
-    cursor: pointer;
+    // cursor: pointer;
     text-wrap: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     &__icon {
         flex: none;
+        width: 2.75rem;
     }
     &__text {
         flex: 1;
@@ -96,9 +97,9 @@
         width: 2.25rem;
         flex: none;
     }
-    &:hover {
-        background-color: #f8f9fa;
-    }
+    // &:hover {
+    //     background-color: #f8f9fa;
+    // }
 }
 
 .account-dropdown {
