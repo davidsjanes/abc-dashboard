@@ -20,6 +20,8 @@
         width: 36rem;
         height: 100%;
         background-color: #fff;
+        display: flex;
+        flex-direction: column;
     }
     &__header {
         background-color: #fff;
@@ -27,5 +29,10 @@
         display: flex;
         justify-content: flex-end;
         border-bottom: 1px solid #e7e9ec;
+        flex: none;
+    }
+    &__body {
+        flex: 1;
+        overflow-y: auto;
     }
 }
