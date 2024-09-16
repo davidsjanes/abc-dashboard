@@ -195,7 +195,7 @@ a {
 }
 
 .sidebar-is-compact {
-    & .slideout {
+    & .slideout__container {
         left: 90px !important;
     }
 }

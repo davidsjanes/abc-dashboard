@@ -1,17 +1,17 @@
 <div class="slideout" (click)="closeSlideoutInstance()">
-    <div class="slideout__container u-shadow-3" 
-    role="document" 
-    (click)="$event.stopPropagation()"
-    [@slideoutAnimate]="{
-        value: animationState,
-        params: {
-            enterPosition: 'translateX(0)',
-            leavePosition: 'translateX(-100%)'
-        }
-    }"
-    (@slideoutAnimate.done)="onAnimationDone($event)" 
-    >
-        <div class="slideout__content">
+    <div class="slideout__container">
+        <div class="slideout__content u-shadow-3"
+        role="document" 
+        (click)="$event.stopPropagation()"
+        [@slideoutAnimate]="{
+            value: animationState,
+            params: {
+                enterPosition: 'translateX(0)',
+                leavePosition: 'translateX(-100%)'
+            }
+        }"
+        (@slideoutAnimate.done)="onAnimationDone($event)" 
+        >
             <div class="slideout__header">
                 <button class="btn btn--text" (click)="closeSlideoutInstance()">Close</button>
             </div>
