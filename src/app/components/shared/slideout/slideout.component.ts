@@ -32,13 +32,13 @@ import { trigger, state, style, animate, transition, AnimationEvent } from '@ang
         style({ 
           transform: '{{ leavePosition }}', 
         }),
-        animate('500ms ease', style({ 
+        animate('350ms ease', style({ 
           transform: '{{ enterPosition }}',
         })
       ),
     ]),
       transition('in => out', [
-        animate('500ms ease-out')
+        animate('350ms ease-out')
       ])
     ]
   )]
