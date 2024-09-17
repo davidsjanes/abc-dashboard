@@ -48,8 +48,7 @@
         border-radius: 6px;
         cursor: pointer;
         &:hover {
-            background-color: #f8f9fa;
-            color: #627181;
+            background-color: #e9f4ff;
         }
     }
 }
@@ -172,7 +171,6 @@
 .language {
     display: flex;
     align-items: center;
-    gap: .5rem;
     &__icon {
         width: 2.4rem;
     }
@@ -182,7 +180,7 @@
         font-weight: 700;
     }
     &__dropdown {
-        padding: 2rem;
+        padding: 1rem;
         min-width: 14rem;
     }
     &__list {
@@ -191,8 +189,14 @@
         margin: 0;
     }
     &__list-item {
-        padding: .5rem 0;
+        padding: .5rem 1rem;
         cursor: pointer;
+        border-radius: 4px;
+        background-color: white;
+        transition: background-color .25s ease;
+        &:hover {
+            background-color: #e9f4ff;
+        }
     }
 }
 
