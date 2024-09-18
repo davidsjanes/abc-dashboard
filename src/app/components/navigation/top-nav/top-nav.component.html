@@ -11,7 +11,7 @@
         <!-- <app-overlay [contentTemplate]="accountDropdown" trigger="click" type="dropdown" position="bottom"> -->
             <div class="account">
                 <div class="account__icon">
-                    <img class="account__icon-img" src="../../../assets/icons/company-icon.svg" alt="Account" />
+                    <img class="account__icon-img" src="../../../assets/icons/company.svg" alt="Account" />
                 </div>
                 <div class="account__text">
                     <!-- <div class="account__welcome">
@@ -103,20 +103,28 @@
         </div>
     </div>
     <div class="top-nav__actions">
-        <div class="search-alt">
+        <div class="search-alt top-nav__link">
             <img class="search-alt__icon" src="../../../assets/icons/search-alt.svg" alt="Search" />
         </div>
-        <div class="top-nav__divider search-alt"></div>
-        <div class="language">
-            <img class="language__icon" src="../../../assets/icons/language.svg" alt="Language" />
-            <!-- <span class="language__text">En</span> -->
+        <div class="language top-nav__link">
+            <app-overlay [contentTemplate]="languageDropdown" trigger="click" type="dropdown" position="bottom">
+                <img class="language__icon" src="../../../assets/icons/language.svg" alt="Language" />
+            </app-overlay>
+            <ng-template #languageDropdown>
+                <div class="language__dropdown">
+                    <ul class="language__list">
+                        <li class="language__list-item">English</li>
+                        <li class="language__list-item">Spanish</li>
+                        <li class="language__list-item">Polish</li>
+                    </ul>
+                </div>
+            </ng-template>
         </div>
-        <div class="top-nav__divider"></div>
-        <div class="notifications">
+        <div class="notifications top-nav__link">
             <img class="notifications__icon" src="../../../assets/icons/notification.svg" alt="Notifications" />
+            <span class="notifications__badge badge">3</span>
         </div>
-        <div class="top-nav__divider"></div>
-        <div class="branch">
+        <div class="branch top-nav__link">
             <div class="branch__icon">
                 <img src="../../../assets/icons/branch.svg" alt="Current Branch" />
             </div>
