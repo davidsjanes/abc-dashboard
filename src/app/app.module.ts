@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -38,6 +39,8 @@ import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-
 import { FiltersComponent } from './components/pages/orders/filters/filters.component';
 import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboard-poc.component';
 import { SlideoutComponent } from './components/shared/slideout/slideout.component';
+import { ProductNavComponent } from './components/navigation/product-nav/product-nav.component';
+import { AccountNavComponent } from './components/navigation/account-nav/account-nav.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +72,8 @@ import { SlideoutComponent } from './components/shared/slideout/slideout.compone
     OrdersRowComponent,
     FiltersComponent,
     DashboardPocComponent,
+    ProductNavComponent,
+    AccountNavComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +83,7 @@ import { SlideoutComponent } from './components/shared/slideout/slideout.compone
     AppRoutingModule,
     GridsterModule,
     RouterModule,
+    CommonModule
   ],
   providers: [ModalService, SlideoutService],
   bootstrap: [AppComponent]
