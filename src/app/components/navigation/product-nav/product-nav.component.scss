@@ -8,6 +8,9 @@
         background-color: #f8f9fa;
         padding: 1rem 2rem;
         border-bottom: 1px solid #e7e9ec;
+        &:has(.product-nav__back) {
+            padding: .25rem 1.5rem;
+        }
     }
     &__category-title {
         display: flex;
