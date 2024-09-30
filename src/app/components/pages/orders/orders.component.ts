@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalService } from 'src/app/services/modal/modal.service';
-import { FiltersComponent } from './filters/filters.component';
+import { OrdersFiltersComponent } from './orders-filters/orders-filters.component';
 
 @Component({
   selector: 'app-orders',
@@ -13,7 +13,7 @@ export class OrdersComponent {
   constructor(private ModalService: ModalService) {}
 
   openFilters() {
-    this.ModalService.open(FiltersComponent, [], ['filters'], ['panel'], ['small'], ['left'], ['Filter List'], ['Apply Filters']);
+    this.ModalService.open(OrdersFiltersComponent, [], ['filters'], ['panel'], ['small'], ['left'], ['Filter List'], ['Apply Filters']);
   }
 
 }

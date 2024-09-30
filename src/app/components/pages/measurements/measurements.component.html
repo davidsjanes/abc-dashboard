@@ -2,16 +2,119 @@
     <div class="page__container">
         <div class="page__header">
             <div class="page__title">
-                <h1>Measurements</h1>
+                <h1 class="page__heading">Measurements</h1>
+                <div class="page__actions"></div>
             </div>
-            <div class="page__actions">
-                <button class="btn btn--primary btn--small">Create New</button>
-            </div>
+            <!-- <div class="page__tabs">
+                <div class="tab">
+                    <ul class="nav tab__nav" id="tabNav">
+                        <li class="tab__item">
+                            <a class="tab__link is-active" id="home-tab" data-toggle="tab" role="tab" aria-selected="true">All</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="profile-tab" data-toggle="tab" role="tab" aria-selected="false">Drafts</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="contact-tab" data-toggle="tab" role="tab" aria-selected="false">Open</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="contact-tab" data-toggle="tab" role="tab" aria-selected="false">Completed</a>
+                        </li>
+                        <li class="tab__item">
+                            <a class="tab__link" id="contact-tab" data-toggle="tab" role="tab" aria-selected="false">For Approval</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
         </div>
         <div class="page__body">
             <div class="page__content">
-                <p class="u-p-20">Measurements List</p>
+                <div class="measurements__header">
+                    <div class="page__filters">
+                        <div class="filters">
+                            <div class="search">
+                                <div class="search__form">
+                                    <div class="form__group">
+                                        <div class="form__add-on">
+                                            <input class="form__element form--small" type="text" id="measurementsSearch" placeholder="Search measurements...">
+                                            <span class="form__append">
+                                                <span class="search__icon">
+                                                    <img src="../../../assets/icons/search.svg" alt="Search">
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn--text u-p-0" (click)="openFilters()">
+                                <img class="filters__icon" src="../../../../assets/icons/filter-sliders.svg" alt="Filter List">
+                                <span>Filter List</span>
+                            </button>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn--outline btn--small">Export</button>
+                            <button class="btn btn--primary btn--small">Order New Reports</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="measurements__body">
+                    <div class="page__list measurements__list">
+                        <div class="grid-list__header">
+                            <div class="grid-list__content">
+                                <div class="grid-list__label measurements__po-number">
+                                    <span class="grid-list__data">PO Number</span>
+                                </div>
+                                <div class="grid-list__label measurements__address">
+                                    <span class="grid-list__data">Address</span>
+                                </div>
+                                <div class="grid-list__label measurements__vendor">
+                                    <span class="grid-list__data">Vendor</span>
+                                </div>
+                                <div class="grid-list__label measurements__date-requested">
+                                    <span class="grid-list__data">Date Requested</span>
+                                </div>
+                                <div class="grid-list__label measurements__structures">
+                                    <span class="grid-list__data">Structures</span>
+                                </div>
+                                <div class="grid-list__label measurements__status">
+                                    <span class="grid-list__data">Status</span>
+                                </div>
+                                <div class="grid-list__label measurements__menu">
+                                    <span class="grid-list__data"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="grid-list__list">
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                            <app-measurements-row></app-measurements-row>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="page__footer">
+            <div class="pagination">
+                <a class="btn btn--text pagination__btn first disabled">First</a>
+                <a class="btn btn--text pagination__btn previous disabled">Prev</a>
+                <span class="pagination__links">
+                    <a class="pagination__btn is-active">1</a>
+                    <a class="pagination__btn">2</a>
+                    <a class="pagination__btn">3</a>
+                    <a class="pagination__btn">4</a>
+                </span>
+                <a class="btn btn--text pagination__btn next">Next</a>
+                <a class="btn btn--text pagination__btn last">Last</a>
+            </div>    
         </div>
     </div>
 </div>
