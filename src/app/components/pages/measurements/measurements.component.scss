@@ -1,2 +1,73 @@
 @import '../shared.scss';
 
+$po-number: 1fr;
+$address: 2fr;
+$vendor: 12rem;
+$date-requested: 1fr;
+$structures: .65fr;
+$status: 10rem;
+$menu: 2rem;
+
+.measurements {
+    &__status, &__menu {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__type-badge {
+        background-color: #ebedef;
+        color: #292F36;
+    }
+}
+
+.search {
+    & .form__append {
+        min-width: 3.6rem;
+    }
+}
+
+.grid-list {
+    &__content {
+        grid-template-columns: $po-number $address $vendor $date-requested $structures $status $menu;
+        grid-template-rows: 1fr;
+    }
+}
+
+@container gridlist (max-width: 960px) {
+    .grid-list {
+        &__content {
+            grid-template-columns: $po-number $address $vendor $date-requested $status $menu;
+        }
+    }
+    .measurements {
+        &__structures {
+            display: none;
+        }
+    }
+}
+
+@container gridlist (max-width: 768px) {
+    .grid-list {
+        &__content {
+            grid-template-columns: $po-number $address $vendor $status $menu;
+        }
+    }
+    .measurements {
+        &__date-requested {
+            display: none;
+        }
+    }
+}
+
+@container gridlist (max-width: 640px) {
+    .grid-list {
+        &__content {
+            grid-template-columns: $po-number $address $status $menu;
+        }
+    }
+    .measurements {
+        &__vendor {
+            display: none;
+        }
+    }
+}

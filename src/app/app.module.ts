@@ -36,7 +36,8 @@ import { ModalComponent } from './components/shared/modal/modal.component';
 import { OverlayComponent } from './components/shared/overlay/overlay.component';
 import { TestContentComponent } from './components/shared/test-content/test-content.component';
 import { OrdersRowComponent } from './components/pages/orders/orders-row/orders-row.component';
-import { FiltersComponent } from './components/pages/orders/filters/filters.component';
+import { MeasurementsRowComponent } from './components/pages/measurements/measurements-row/measurements-row.component';
+import { OrdersFiltersComponent } from './components/pages/orders/orders-filters/orders-filters.component';
 import { DashboardPocComponent } from './components/pages/dashboard-poc/dashboard-poc.component';
 import { SlideoutComponent } from './components/shared/slideout/slideout.component';
 import { ProductNavComponent } from './components/navigation/product-nav/product-nav.component';
@@ -70,7 +71,8 @@ import { AccountNavComponent } from './components/navigation/account-nav/account
     OverlayComponent,
     TestContentComponent,
     OrdersRowComponent,
-    FiltersComponent,
+    MeasurementsRowComponent,
+    OrdersFiltersComponent,
     DashboardPocComponent,
     ProductNavComponent,
     AccountNavComponent

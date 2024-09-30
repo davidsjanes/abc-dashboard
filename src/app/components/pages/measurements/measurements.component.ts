@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalService } from 'src/app/services/modal/modal.service';
+import { MeasurementsFiltersComponent } from './measurements-filters/measurements-filters.component';
 
 @Component({
   selector: 'app-measurements',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class MeasurementsComponent {
 
+  constructor(private ModalService: ModalService) {}
+
+  openFilters() {
+    this.ModalService.open(MeasurementsFiltersComponent, [], ['filters'], ['panel'], ['small'], ['left'], ['Filter List'], ['Apply Filters']);
+  }
+  
 }
