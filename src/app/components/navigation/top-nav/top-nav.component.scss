@@ -14,7 +14,7 @@
     justify-content: space-between;
     gap: 2rem;
     width: 100%;
-    height: 70px;
+    height: 60px;
     background-color: white;
     padding: 0 3rem;
     container: topnav / inline-size;
@@ -226,7 +226,7 @@
     align-items: center;
     gap: 1.25rem;
     line-height: 1.3;
-    padding: 1rem 1.5rem;
+    padding: .75rem 1rem;
     &__text {
         font-size: 1.2rem;
         & span {
