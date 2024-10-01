@@ -1,4 +1,4 @@
-import { Component, Inject, Input, ViewChild, ViewContainerRef, EventEmitter, Output, AfterViewInit, OnInit, OnDestroy, ComponentRef, Injector } from '@angular/core';
+import { Component, Input, ViewChild, ViewContainerRef, EventEmitter, Output, AfterViewInit, OnInit, OnDestroy, ComponentRef, Injector } from '@angular/core';
 import { trigger, state, style, animate, transition, AnimationEvent } from '@angular/animations';
 
 @Component({
@@ -51,7 +51,6 @@ export class SlideoutComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() title = '';
 
   endPosition = '';
-
   animationState: 'in' | 'out' = 'in';
   private componentRef!: ComponentRef<any>;
   
