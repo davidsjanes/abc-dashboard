@@ -14,7 +14,7 @@ export class SlideoutService {
 
   constructor(private overlay: Overlay) {}
 
-  open(component: any, cssClasses: string[] = [], title: any = 'Title'): void {
+  open(component: any, cssClasses: string[] = [], title: any = 'Title', type: any = 'nav', position: any = 'left', hasHeader: boolean = true): void {
     this.overlayRef = this.overlay.create({
       hasBackdrop: true,
       backdropClass: 'slideout-backdrop',
@@ -26,6 +26,8 @@ export class SlideoutService {
     this.componentRef = this.overlayRef.attach(portal);
 
     this.componentRef.instance.title = title;
+    this.componentRef.instance.type = type;
+    this.componentRef.instance.position = position;
     this.componentRef.instance.childComponentType = component;
     this.componentRef.instance.closeSlideout.subscribe(() => this.disposeOverlay());
   }

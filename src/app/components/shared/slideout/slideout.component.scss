@@ -11,9 +11,9 @@
     width: 100%;
     height: 100%;
     &__container {
+        display: flex;
         width: 100%;
         height: 100%;
-        left: 240px;
         overflow: hidden;
     }
     &__content {
@@ -34,5 +34,26 @@
     &__body {
         flex: 1;
         overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+.slideout--nav {
+    &.slideout--left {
+        left: 240px;
+    }
+    &.slideout--right {
+        right: 0;
+    }
+}
+
+.slideout--content {
+    top: 60px;
+    height: calc(100% - 60px);
+    &.slideout--left {
+        justify-content: flex-start;
+    }
+    &.slideout--right {
+        justify-content: flex-end;
     }
 }

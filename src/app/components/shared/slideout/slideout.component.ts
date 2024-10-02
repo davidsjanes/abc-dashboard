@@ -49,14 +49,26 @@ export class SlideoutComponent implements OnInit, AfterViewInit, OnDestroy {
   @Output() closeSlideout = new EventEmitter<void>();
   @ViewChild('slideoutContent', { read: ViewContainerRef, static: false }) slideoutContent!: ViewContainerRef;
   @Input() title = '';
+  @Input() type: 'nav' | 'content' = 'nav';
+  @Input() position: 'left' | 'right' = 'left';
+  @Input() hasHeader: true;
 
+  slideoutType = '';
+  slideoutPosition = '';
   endPosition = '';
   animationState: 'in' | 'out' = 'in';
   private componentRef!: ComponentRef<any>;
+
+  public get classes(): string[] {
+    return [`slideout--${this.type}`, `slideout--${this.position}`];
+  }
   
   constructor(private injector: Injector) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.slideoutType = this.type.toString(); 
+    this.slideoutPosition = this.position.toString(); 
+  }
 
   ngAfterViewInit(): void {
     this.loadChildComponent();

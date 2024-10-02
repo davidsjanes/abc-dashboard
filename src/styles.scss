@@ -196,7 +196,9 @@ a {
 }
 
 .sidebar-is-compact {
-    & .slideout__container {
-        left: 90px !important;
+    & .slideout {
+        &--nav {
+            left: 90px !important;
+        }
     }
 }
