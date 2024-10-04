@@ -1,0 +1,17 @@
+.new-report {
+    &__vendors {
+        display: flex;
+        gap: 1rem;
+    }
+    &__vendor {
+        width: 50%;
+        height: 15rem;
+        border: 1px solid #e7e9ec;
+    }
+    &__actions {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
