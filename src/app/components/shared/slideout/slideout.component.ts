@@ -52,6 +52,7 @@ export class SlideoutComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() type: 'nav' | 'content' = 'nav';
   @Input() position: 'left' | 'right' = 'left';
   @Input() hasHeader: true;
+  @Input() hasBackdrop: true;
 
   slideoutType = '';
   slideoutPosition = '';

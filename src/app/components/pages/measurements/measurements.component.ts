@@ -18,7 +18,7 @@ export class MeasurementsComponent {
   }
 
   openNewReport() {
-    this.SlideoutService.open(MeasurementsNewReportComponent, ['slideout-nav'], ['Order New Report'], ['content'], ['right'], false);
+    this.SlideoutService.open(MeasurementsNewReportComponent, ['slideout-nav'], ['Order New Report'], ['content'], ['right'], false, false);
   }
   
 }
