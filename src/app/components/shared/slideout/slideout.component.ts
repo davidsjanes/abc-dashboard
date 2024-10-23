@@ -55,6 +55,7 @@ export class SlideoutComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() topPosition: 'top' | 'below' = 'top';
   @Input() hasHeader: true;
   @Input() hasFooter: false;
+  @Input() showTitle: true;
   @Input() hasBackdrop: true;
 
   slideoutType = '';

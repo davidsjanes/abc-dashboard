@@ -16,6 +16,9 @@
                 <button class="btn btn--text" (click)="closeSlideoutInstance()">Close</button>
             </div>
             <div class="slideout__body">
+                <h3 class="slideout__title" *ngIf="showTitle">
+                    {{ title }}
+                </h3>
                 <ng-template #slideoutContent></ng-template>
             </div>
             <div class="slideout__footer" *ngIf="hasFooter">
