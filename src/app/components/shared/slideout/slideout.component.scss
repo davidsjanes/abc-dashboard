@@ -35,6 +35,13 @@
         overflow-y: auto;
         overflow-x: hidden;
     }
+    &--below {
+        top: 60px;
+        height: calc(100% - 60px);
+    }
+    &--top {
+        top: 0;
+    }
 }
 
 .slideout--nav {
@@ -47,8 +54,6 @@
 }
 
 .slideout--content {
-    top: 60px;
-    height: calc(100% - 60px);
     &.slideout--left {
         justify-content: flex-start;
     }

@@ -51,6 +51,7 @@ export class SlideoutComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() title = '';
   @Input() type: 'nav' | 'content' = 'nav';
   @Input() position: 'left' | 'right' = 'left';
+  @Input() topPosition: 'top' | 'below' = 'top';
   @Input() hasHeader: true;
   @Input() hasBackdrop: true;
 
@@ -61,7 +62,7 @@ export class SlideoutComponent implements OnInit, AfterViewInit, OnDestroy {
   private componentRef!: ComponentRef<any>;
 
   public get classes(): string[] {
-    return [`slideout--${this.type}`, `slideout--${this.position}`];
+    return [`slideout--${this.type}`, `slideout--${this.position}`, `slideout--${this.topPosition}`];
   }
   
   constructor(private injector: Injector) {}
