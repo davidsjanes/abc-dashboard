@@ -16,11 +16,11 @@ export class SiteNavComponent {
   constructor(private SlideoutService: SlideoutService) {}
 
   openProductsSlideout() {
-    this.SlideoutService.open(ProductNavComponent, ['slideout-nav'], ['Products'], ['nav'], ['left']);
+    this.SlideoutService.open(ProductNavComponent, ['slideout-nav'], ['Products'], [], ['nav'], ['left'], ['top'], true, false, true);
   }
 
   openAccountSlideout() {
-    this.SlideoutService.open(AccountNavComponent, ['slideout-nav'], ['Account'], ['nav'], ['left']);
+    this.SlideoutService.open(AccountNavComponent, ['slideout-nav'], ['Account'], [], ['nav'], ['left'], ['top'], true, false, true);
   }
 
 }

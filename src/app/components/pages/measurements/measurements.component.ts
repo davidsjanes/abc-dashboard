@@ -14,11 +14,11 @@ export class MeasurementsComponent {
   constructor(private ModalService: ModalService, private SlideoutService: SlideoutService) {}
 
   openFilters() {
-    this.SlideoutService.open(MeasurementsFiltersComponent, ['slideout-nav'], ['Products'], ['nav'], ['left'], ['below'], true, false);
+    this.SlideoutService.open(MeasurementsFiltersComponent, ['slideout-nav'], ['Products'], ['Save'], ['nav'], ['left'], ['below'], true, true, false);
   }
 
   openNewReport() {
-    this.SlideoutService.open(MeasurementsNewReportComponent, ['slideout-nav'], ['Order New Report'], ['content'], ['right'], ['below'], false, false);
+    this.SlideoutService.open(MeasurementsNewReportComponent, ['slideout-nav'], ['Order New Report'], [], ['content'], ['right'], ['below'], false, false, false);
   }
   
 }

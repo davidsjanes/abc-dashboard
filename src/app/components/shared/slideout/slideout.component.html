@@ -18,6 +18,10 @@
             <div class="slideout__body">
                 <ng-template #slideoutContent></ng-template>
             </div>
+            <div class="slideout__footer" *ngIf="hasFooter">
+                <button type="button" class="btn btn--text btn--cancel u-p-0" (click)="closeSlideoutInstance()">Cancel</button>
+                <button type="button" class="btn btn--primary btn--small" (click)="closeSlideoutInstance()">{{ confirmText }}</button>
+            </div>
         </div>
     </div>        
 </div>

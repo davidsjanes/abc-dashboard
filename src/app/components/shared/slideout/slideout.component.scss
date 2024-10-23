@@ -35,6 +35,15 @@
         overflow-y: auto;
         overflow-x: hidden;
     }
+    &__footer {
+        background-color: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: flex-end;
+        border-top: 1px solid #e7e9ec;
+        flex: none;
+        gap: 1.5rem;
+    }
     &--below {
         top: 60px;
         height: calc(100% - 60px);

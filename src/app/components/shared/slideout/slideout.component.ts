@@ -49,10 +49,12 @@ export class SlideoutComponent implements OnInit, AfterViewInit, OnDestroy {
   @Output() closeSlideout = new EventEmitter<void>();
   @ViewChild('slideoutContent', { read: ViewContainerRef, static: false }) slideoutContent!: ViewContainerRef;
   @Input() title = '';
+  @Input() confirmText = 'Apply';
   @Input() type: 'nav' | 'content' = 'nav';
   @Input() position: 'left' | 'right' = 'left';
   @Input() topPosition: 'top' | 'below' = 'top';
   @Input() hasHeader: true;
+  @Input() hasFooter: false;
   @Input() hasBackdrop: true;
 
   slideoutType = '';
