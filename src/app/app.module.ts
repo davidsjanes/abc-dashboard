@@ -24,6 +24,8 @@ import { MeasurementsWidgetComponent } from './components/pages/dashboard/widget
 import { OrdersComponent } from './components/pages/orders/orders.component';
 import { AccountComponent } from './components/pages/account/account.component';
 import { MeasurementsComponent } from './components/pages/measurements/measurements.component';
+import { MeasurementsNewReportComponent } from './components/pages/measurements/measurements-new-report/measurements-new-report.component';
+import { MeasurementsNewPageComponent } from './components/pages/measurements/measurements-new-page/measurements-new-page.component';
 import { QuotesComponent } from './components/pages/quotes/quotes.component';
 import { TemplatesComponent } from './components/pages/templates/templates.component';
 import { DeliveriesComponent } from './components/pages/deliveries/deliveries.component';
@@ -59,6 +61,8 @@ import { AccountNavComponent } from './components/navigation/account-nav/account
     DeliveriesComponent,
     TemplatesComponent,
     MeasurementsComponent,
+    MeasurementsNewReportComponent,
+    MeasurementsNewPageComponent,
     AccountComponent,
     QuotesComponent,
     OrdersWidgetRowComponent,
