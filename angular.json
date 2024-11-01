@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "abc-dashboard": {
+    "abc-dev-portal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/abc-dashboard",
+            "outputPath": "dist/abc-dev-portal",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -68,10 +68,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "abc-dashboard:build:production"
+              "buildTarget": "abc-dev-portal:build:production"
             },
             "development": {
-              "buildTarget": "abc-dashboard:build:development"
+              "buildTarget": "abc-dev-portal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "abc-dashboard:build"
+            "buildTarget": "abc-dev-portal:build"
           }
         },
         "test": {
